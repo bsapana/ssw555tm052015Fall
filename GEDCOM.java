@@ -1,5 +1,5 @@
 
-/* Name : Sapana Belorkar
+/* 
 
 This program reads the input GEDCOM text file as a command line argument and prints records, level numbers and tags on the output console.
 
