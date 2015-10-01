@@ -12,6 +12,7 @@ This program reads the input GEDCOM text file as a command line argument and pri
 
 import java.io.*;
 import java.util.*;
+import java.text.SimpleDateFormat;
 class MainActivity
 {   
 	@SuppressWarnings("unchecked")
@@ -34,6 +35,7 @@ class MainActivity
                boolean Err=false;
                boolean Cerr=false;
                boolean Infoerr=false;
+               boolean error=false;
                
                String lastevent="null";
                boolean evt=false;
@@ -100,6 +102,10 @@ class MainActivity
                          if(Cerr)
                      {
                        // break;
+                        }
+                        if(error)
+                        {
+                            //break;
                         }
                      ln++;
                      String[] data=line.split(" ");
@@ -201,11 +207,11 @@ class MainActivity
                                         }
                                         else if(data.length==4)
                                         {
-                                            name.put(ip,data[2]+ data[3].replace("/",""));
+                                            name.put(ip,data[2]+" "+ data[3].replace("/",""));
                                         }
                                         else if(data.length==5)
                                         {
-                                            name.put(ip,data[2]+ data[3].replace("/","")+ data[4].replace("/",""));
+                                            name.put(ip,data[2]+" "+ data[3].replace("/","")+" "+data[4].replace("/",""));
                                         }
                                         else
                                         {
@@ -257,7 +263,8 @@ class MainActivity
                                     else if(data[1].compareTo(Tags[3])==0)//checking birt
                                     {
                                         tag=data[1];
-                                        if(!evt)
+
+                                               if(!evt)
                                         {
                                         lastevent="birt";
                                         evtl=ln;
@@ -268,6 +275,8 @@ class MainActivity
                                             Cerr=true;
                                             System.out.println("Critical Error: Date is missing for an event : \""+lastevent+"\" at line "+evtl);
                                         }
+                                       
+                                     
 
                                     }
                                     else if(data[1].compareTo(Tags[4])==0)//checking deat
@@ -422,8 +431,8 @@ class MainActivity
                                                 {
                                                     if(lastevent.compareTo("birt")==0)
                                                     {
-                                                        birt.put(ip,day+"-"+mon+"-"+year);
-                                                        evt=false;
+                                                       birt.put(ip,day+"-"+mon+"-"+year);
+                                                       evt=false;
                                                     }
                                                     else if(lastevent.compareTo("deat")==0)
                                                     {
@@ -496,11 +505,27 @@ class MainActivity
                   System.out.println("Individual Id:\t\t" +id);
                   System.out.println("Name:\t\t\t" + name.get(id));
                   System.out.println("Gender:\t\t\t" + sex.get(id));
-                  System.out.println("D.O.B:\t\t\t" + birt.get(id));
-                  System.out.println("D.O.D:\t\t\t" + deat.get(id));;
+                  
+                 String dob,dod;
+                  dob=birt.get(id).toString();
+                  dod=deat.get(id).toString();
+                  
+                  if((dod.compareTo("null")!=0)&&(dob.compareTo("null")!=0))
+                  {
+                      if( !birthvalidation(dod, dob))
+                      {
+                          System.out.println("Error US03:Birth date of "+name.get(id)+" ("+id.replace("@","")+") occurs after death date.");
+                        }
+                    }
+                    
+                    
+                  System.out.println("D.O.B:\t\t\t" + dob);
+                  System.out.println("D.O.D:\t\t\t" + dod );
                   System.out.println("Child of Family:\t" + famc.get(id));
                   System.out.println("Spouse of Family:\t" + fams.get(id));
                  }
+                 
+                 
                      System.out.println("\n");
                      System.out.println("\n");
                  System.out.println("Family Info");
@@ -510,11 +535,27 @@ class MainActivity
                      System.out.println("\n");
                   String id=fam.get(c);  
                   System.out.println("Family Id:\t\t" +id);
+                  
+                  String dom,dod;
+                  dom=marr.get(id).toString();
+                  dod=div.get(id).toString();
+                  
                   System.out.println("Date of Marriage:\t" + marr.get(id));
                   System.out.println("Husband's Id:\t\t" + husb.get(id)+" "+name.get(husb.get(id)));
                   System.out.println("Wife's Id:\t\t" + wife.get(id)+" "+name.get(wife.get(id)));
                   System.out.println("Id/s of Child/Children:\t" + chil.get(id));
                   System.out.println("Date of Divorce:\t" + div.get(id));
+                  
+                  
+                   if((dod.compareTo("null")!=0)&&(dom.compareTo("null")!=0))
+                  {
+                      if( !birthvalidation(dod, dom))
+                      {
+                          System.out.println("Error US04: Marriage date of "+name.get(husb.get(id))+" ("+(husb.get(id)).toString().replace("@","")+") and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+")occurs after their divorce.");
+                        }
+                    }
+        		    
+                    
                   
                 }
                   
@@ -537,4 +578,69 @@ class MainActivity
         }
 
      }
+     
+     
+     
+     public static boolean birthvalidation(String deat, String birt )
+     {
+         try
+         {
+         ArrayList<String> month = new ArrayList<String>();
+               month.add("JAN");
+               month.add("FEB");
+               month.add("MAR");
+               month.add("APR");
+               month.add("MAY");
+               month.add("JUN");
+               month.add("JUL");
+               month.add("AUG");
+               month.add("SEP");
+               month.add("OCT");
+               month.add("NOV");
+               month.add("DEC");
+
+               int death_day,death_month,death_year,birth_day,birth_month,birth_year;
+               String[] array = deat.split("-");
+               
+               if(array[0].length()<2)
+               {
+               death_day=Integer.parseInt(0+array[0]);
+               }
+               else
+               {
+                death_day=Integer.parseInt(array[0]);
+                }
+               
+               
+               death_month=(month.indexOf(array[1]));
+               death_year=Integer.parseInt(array[2]);
+               
+               String[] array2 = birt.split("-");
+               if(array2[0].length()<2)
+               {
+               birth_day=Integer.parseInt(0+array2[0]);
+               }
+               else
+               {
+               birth_day=Integer.parseInt(array2[0]);
+                }
+               birth_month=(month.indexOf(array2[1]));
+               birth_year=Integer.parseInt(array2[2]);
+               
+           SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        	Date death_date = sdf.parse( death_year+"-"+death_month+"-"+death_day);
+        	Date birth_date = sdf.parse( birth_year+"-"+birth_month+"-"+birth_day);
+        	
+        	if(birth_date.compareTo(death_date )>0){
+        		return false;
+                }
+        	
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error in birthvalidation() :"+e.getMessage() );
+        }
+               
+         return true;
+        }
 }
