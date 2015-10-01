@@ -22,7 +22,7 @@ public class Sprint1S1 {
 		month.put("JUN", "6");
 		month.put("JUL","7");
 		month.put("AUG","8");
-		month.put("SEP","9");
+		month.put("SEP","9"); 
 		month.put("OCT","10");
 		month.put("NOV","11");
 		month.put("DEC","12");
