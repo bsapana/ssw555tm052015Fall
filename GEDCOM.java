@@ -13,6 +13,7 @@ This program reads the input GEDCOM text file as a command line argument and pri
 import java.io.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
+
 class MainActivity
 {   
 	@SuppressWarnings("unchecked")
@@ -25,8 +26,9 @@ class MainActivity
     {
         if(args.length==1)
         {
-        String filename=args[0];
-        File f=new File(filename);
+        String filename=args[0]; 
+    	//String filename="TestFamily1.ged";
+        File f= new File(filename);
         
            if(f.exists())
            {   int ln=0;
@@ -520,7 +522,29 @@ class MainActivity
                     
                     
                   System.out.println("D.O.B:\t\t\t" + dob);
+                  
+         		//start: Added for US01
+                  if(dob.compareTo("null")!=0)
+                 {   
+                     if( !currentdatevalidation(dob))
+                     {
+                    	 System.out.println("Error US01 :Birth date of "+name.get(id)+" ("+id.replace("@","")+") should not be after current date.");
+                     }
+                   }
+                  //end: Added for US01
+                  
                   System.out.println("D.O.D:\t\t\t" + dod );
+
+          		 //start: Added for US01
+                  if(dod.compareTo("null")!=0)
+                 {   
+                     if( !currentdatevalidation(dod))
+                     {
+                    	 System.out.println("Error US01 :Death date of "+name.get(id)+" ("+id.replace("@","")+") should not be after current date.");
+                     }
+                   }
+                  //end: Added for US01
+                  
                   System.out.println("Child of Family:\t" + famc.get(id));
                   System.out.println("Spouse of Family:\t" + fams.get(id));
                  }
@@ -536,16 +560,54 @@ class MainActivity
                   String id=fam.get(c);  
                   System.out.println("Family Id:\t\t" +id);
                   
-                  String dom,dod;
+                  String dom,dod,hdob,wdob;
                   dom=marr.get(id).toString();
                   dod=div.get(id).toString();
-                  
+                  hdob=birt.get(husb.get(id)).toString(); //Added for US02
+                  wdob=birt.get(wife.get(id)).toString(); //Added for US02
                   System.out.println("Date of Marriage:\t" + marr.get(id));
+                  
+                  //start: Added for US01 and US02
+                                    
+                  if(dom.compareTo("null")!=0)
+                 {   
+                     if( !currentdatevalidation(dom))
+                     {
+                         System.out.println("Error US01 : Marriage date of "+name.get(husb.get(id))+" ("+(husb.get(id)).toString().replace("@","")+") and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+") should not be after current date");
+                     }
+                   }
+                  if((dom.compareTo("null")!=0) && (hdob.compareTo("null")!=0))
+                 {   
+                     if( !birthvalidation(dom, hdob))
+                     {
+                         System.out.println("Error US02 : Birth date of Husband "+name.get(husb.get(id))+" ("+(husb.get(id)).toString().replace("@","")+") should not be after marriage date");
+                     }
+                   }
+                  if((dom.compareTo("null")!=0) && (wdob.compareTo("null")!=0))
+                 {   
+                     if( !birthvalidation(dom, wdob))
+                     {
+                         System.out.println("Error US02 : Birth date of Wife "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+") should not be after marriage date");
+                     }
+                   }
+                  //end: Added for US02
+                  
                   System.out.println("Husband's Id:\t\t" + husb.get(id)+" "+name.get(husb.get(id)));
                   System.out.println("Wife's Id:\t\t" + wife.get(id)+" "+name.get(wife.get(id)));
                   System.out.println("Id/s of Child/Children:\t" + chil.get(id));
                   System.out.println("Date of Divorce:\t" + div.get(id));
                   
+         		 //start: Added for US01
+                  
+                  if(dod.compareTo("null")!=0)
+                 {   
+                     if( !currentdatevalidation(dod))
+                     {
+                         System.out.println("Error US01 : Divorce date of "+name.get(husb.get(id))+" ("+(husb.get(id)).toString().replace("@","")+") and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+") should not be after current date");
+                     }
+                   }
+                  
+                //end: Added for US01
                   
                    if((dod.compareTo("null")!=0)&&(dom.compareTo("null")!=0))
                   {
@@ -554,8 +616,6 @@ class MainActivity
                           System.out.println("Error US04: Marriage date of "+name.get(husb.get(id))+" ("+(husb.get(id)).toString().replace("@","")+") and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+")occurs after their divorce.");
                         }
                     }
-        		    
-                    
                   
                 }
                   
@@ -643,4 +703,64 @@ class MainActivity
                
          return true;
         }
+     
+     //start: Added for US01
+     
+     public static boolean currentdatevalidation(String date)
+     {
+         try
+         {
+         ArrayList<String> month = new ArrayList<String>();
+               month.add("JAN");
+               month.add("FEB");
+               month.add("MAR");
+               month.add("APR");
+               month.add("MAY");
+               month.add("JUN");
+               month.add("JUL");
+               month.add("AUG");
+               month.add("SEP");
+               month.add("OCT");
+               month.add("NOV");
+               month.add("DEC");
+
+               int date_day,date_month,date_year;
+               String[] array = date.split("-");
+               
+               if(array[0].length()<2)
+               {
+            	   date_day=Integer.parseInt(0+array[0]);
+               }
+               else
+               {
+            	   date_day=Integer.parseInt(array[0]);
+                }
+               
+               
+               date_month=(month.indexOf(array[1]));
+               date_year=Integer.parseInt(array[2]);
+               
+               SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+               Date checkDate = sdf.parse(date_year+"-"+date_month+"-"+date_day);
+        	
+        	    Calendar cal = Calendar.getInstance();
+        	    SimpleDateFormat curr = new SimpleDateFormat("yyyy-MM-dd");
+        	    String dat = curr.format(cal.getTime());
+        	    Date currDate = curr.parse(dat);
+        	
+        	if(checkDate.compareTo(currDate) > 0){
+        		return false;
+                }
+        	
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error in currentdatevalidation() :"+e.getMessage() );
+        }
+               
+         return true;
+        }
+     
+     //end: Added for US01
+     
 }
