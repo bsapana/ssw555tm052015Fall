@@ -1,0 +1,31 @@
+Display US24:
+To display birth date
+NAME           Birth date
+Ming          17/APR/1990
+Biping          13/JUL/1963
+Fengxia          2/FEB/1963
+Jimmy          16/JUN/1990
+Rose          2/JAN/1988
+Rebeca          14/OCT/1992
+Kangri          2/APR/1923
+Jiemin          6/JAN/1922
+RiYue          15/NOV/1965
+Kelly          13/MAY/1965
+Fei          18/APR/1964
+Kule          7/SEP/1966
+Yufei          3/OCT/1995
+Rangqi          13/AUG/1970
+Kadong          15/MAY/1970
+ZhenYI          17/JUL/1968
+Changqing          8/AUG/1995
+Danteng          14/APR/1990
+Fei          6/NOV/1990
+Xiaoyu          5/AUG/1990
+Tianchi          5/SEP/1990
+Song          14/JUL/1989
+Ri          10/NOV/1995
+To display US06:
+Check for valid death date
+19/JUL/2008 the value for death date is valid
+21/NOV/2013 the value for death date is valid
+19/APR/2014 the value for death date is valid
