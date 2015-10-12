@@ -1,0 +1,563 @@
+TestFamily1.ged is being accessed
+ Level :0  TAG :HEAD
+ Level :0  TAG :NOTE
+Syntax Error: Invalid Tag "SOUR"at line 3
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "FILE"at line 4
+ Level :1  TAG :null
+Critical Error: Date is not pointed to any event at line 5
+ Level :1  TAG :DATE
+Syntax Error: Invalid Tag "DEST"at line 6
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "GEDC"at line 7
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "VERS"at line 8
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "FORM"at line 9
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SUBM"at line 10
+ Level :1  TAG :null
+Critical Error: Unique Id not set for the tag : "NAME" at line 11
+ Level :2  TAG :NAME
+Syntax Error: Invalid Tag "SUBN"at line 12
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "CHAR"at line 13
+ Level :1  TAG :null
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :DEAT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :DEAT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :DEAT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 154
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "EVEN"at line 155
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "TYPE"at line 156
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 157
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "_CURRENT"at line 164
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 174
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 175
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 182
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 183
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "_CURRENT"at line 190
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 197
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 198
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 204
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 205
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 212
+ Level :2  TAG :null
+ Level :1  TAG :DIV
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "_CURRENT"at line 215
+ Level :1  TAG :null
+ Level :0  TAG :TRLR
+
+
+
+
+Individual Info
+
+
+
+
+Individual Id:		@I1@
+Name:			Varun Shah
+Gender:			M
+D.O.B:			1-NOV-1985
+D.O.D:			null
+Child of Family:	@F1@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I2@
+Name:			Bina Shah
+Gender:			F
+D.O.B:			12-NOV-1962
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F2@
+
+
+
+
+Individual Id:		@I3@
+Name:			Ketan Shah
+Gender:			M
+Error US03:Birth date of Ketan Shah (I3) occurs after death date.
+D.O.B:			1-SEP-1998
+D.O.D:			30-SEP-1992
+Child of Family:	@F3@
+Spouse of Family:	@F1@
+
+
+
+
+Individual Id:		@I4@
+Name:			Prabhuta Shah
+Gender:			F
+D.O.B:			8-APR-1935
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F3@
+
+
+
+
+Individual Id:		@I5@
+Name:			Navinchandra Shah
+Gender:			M
+D.O.B:			9-APR-1930
+D.O.D:			null
+Child of Family:	@F4@
+Spouse of Family:	@F3@
+
+
+
+
+Individual Id:		@I6@
+Name:			Chetan Shah
+Gender:			M
+D.O.B:			1-JAN-1960
+D.O.D:			null
+Child of Family:	@F3@
+Spouse of Family:	@F5@
+
+
+
+
+Individual Id:		@I7@
+Name:			Metan Shah
+Gender:			M
+D.O.B:			2-JAN-1962
+D.O.D:			null
+Child of Family:	@F3@
+Spouse of Family:	@F6@
+
+
+
+
+Individual Id:		@I8@
+Name:			Keshav Shah
+Gender:			M
+D.O.B:			1-FEB-1965
+D.O.D:			null
+Child of Family:	@F3@
+Spouse of Family:	@F7@
+
+
+
+
+Individual Id:		@I9@
+Name:			Nilesh Vyas
+Gender:			M
+D.O.B:			14-MAY-2958
+Error US01 :Birth date of Nilesh Vyas (I9) should not be after current date.
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F8@
+
+
+
+
+Individual Id:		@I10@
+Name:			Maitrik Shah
+Gender:			M
+D.O.B:			6-FEB-1988
+D.O.D:			null
+Child of Family:	@F1@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I11@
+Name:			Devina Vyas
+Gender:			F
+D.O.B:			10-MAY-1981
+D.O.D:			null
+Child of Family:	@F8@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I12@
+Name:			Smitha Vyas
+Gender:			F
+D.O.B:			5-MAY-1962
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F8@
+
+
+
+
+Individual Id:		@I13@
+Name:			Denzy Vyas
+Gender:			M
+D.O.B:			3-OCT-1995
+D.O.D:			null
+Child of Family:	@F2@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I14@
+Name:			Kalpna Shah
+Gender:			F
+D.O.B:			6-MAR-1965
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F6@
+
+
+
+
+Individual Id:		@I15@
+Name:			Krupal Shah
+Gender:			F
+D.O.B:			29-FEB-1996
+D.O.D:			null
+Child of Family:	@F6@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I16@
+Name:			Shilpa Shah
+Gender:			F
+D.O.B:			4-APR-1962
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F5@
+
+
+
+
+Individual Id:		@I17@
+Name:			Hasmukh Shah
+Gender:			F
+D.O.B:			3-JAN-1930
+D.O.D:			5-MAR-2013
+Child of Family:	null
+Spouse of Family:	@F4@
+
+
+
+
+Individual Id:		@I18@
+Name:			Manu Bechar Shah
+Gender:			M
+D.O.B:			2-FEB-1910
+D.O.D:			2-MAR-2020
+Error US01 :Death date of Manu Bechar Shah (I18) should not be after current date.
+Child of Family:	null
+Spouse of Family:	@F4@
+
+
+
+
+Individual Id:		@I19@
+Name:			Adit Shah
+Gender:			M
+D.O.B:			17-APR-1996
+D.O.D:			null
+Child of Family:	@F5@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I20@
+Name:			Darshana Shah
+Gender:			F
+D.O.B:			5-APR-1965
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F7@
+
+
+
+
+Family Info
+
+
+
+
+Family Id:		@F1@
+Date of Marriage:	14-APR-2017
+Error US01 : Marriage date of Ketan Shah (I3) and Bina Shah (I2) should not be after current date
+Husband's Id:		@I3@ Ketan Shah
+Wife's Id:		@I2@ Bina Shah
+Id/s of Child/Children:	@I1@~@I10@
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F2@
+Date of Marriage:	14-MAY-2000
+Error US02 : Birth date of Husband Nilesh Vyas (I9) should not be after marriage date
+Husband's Id:		@I9@ Nilesh Vyas
+Wife's Id:		@I2@ Bina Shah
+Id/s of Child/Children:	@I13@
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F3@
+Date of Marriage:	6-JAN-1955
+Husband's Id:		@I5@ Navinchandra Shah
+Wife's Id:		@I4@ Prabhuta Shah
+Id/s of Child/Children:	@I3@~@I6@~@I7@~@I8@
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F4@
+Date of Marriage:	5-FEB-1945
+Husband's Id:		@I18@ Manu Bechar Shah
+Wife's Id:		@I17@ Hasmukh Shah
+Id/s of Child/Children:	@I5@
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F5@
+Date of Marriage:	4-APR-1990
+Husband's Id:		@I6@ Chetan Shah
+Wife's Id:		@I16@ Shilpa Shah
+Id/s of Child/Children:	@I19@
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F6@
+Date of Marriage:	2-FEB-1995
+Husband's Id:		@I7@ Metan Shah
+Wife's Id:		@I14@ Kalpna Shah
+Id/s of Child/Children:	@I15@
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F7@
+Date of Marriage:	3-FEB-1990
+Husband's Id:		@I8@ Keshav Shah
+Wife's Id:		@I20@ Darshana Shah
+Id/s of Child/Children:	null
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F8@
+Date of Marriage:	5-FEB-2024
+Error US01 : Marriage date of Nilesh Vyas (I9) and Smitha Vyas (I12) should not be after current date
+Error US02 : Birth date of Husband Nilesh Vyas (I9) should not be after marriage date
+Husband's Id:		@I9@ Nilesh Vyas
+Wife's Id:		@I12@ Smitha Vyas
+Id/s of Child/Children:	@I11@
+Date of Divorce:	3-FEB-2022
+Error US01 : Divorce date of Nilesh Vyas (I9) and Smitha Vyas (I12) should not be after current date
+Error US04: Marriage date of Nilesh Vyas (I9) and Smitha Vyas (I12)occurs after their divorce.
