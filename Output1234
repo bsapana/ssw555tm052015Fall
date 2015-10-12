@@ -561,3 +561,17 @@ Id/s of Child/Children:	@I11@
 Date of Divorce:	3-FEB-2022
 Error US01 : Divorce date of Nilesh Vyas (I9) and Smitha Vyas (I12) should not be after current date
 Error US04: Marriage date of Nilesh Vyas (I9) and Smitha Vyas (I12)occurs after their divorce.
+
+current date in this file is 16 SEP 2015
+---------------current date should be less than 150 years after birth for all living people-----------------------------
+ERROR US07: current date of Darshana /Shah/(@I20@) who is still living should be less than 150 years after birth 
+---------------Death should be less than 150 years after birth for dead people-----------------------------
+
+
++--------------------------Child should be born after marriage of parents------------------------
++Anomaly US08: Birth date of Varun /Shah/(@I1@) occurs before the marriage date of his parents in Family @F1@
++Anomaly US08: Birth date of Navinchandra /Shah/(@I5@) occurs before the marriage date of his parents in Family @F4@
++Anomaly US08: Birth date of Maitrik /Shah/(@I10@) occurs before the marriage date of his parents in Family @F1@
++Anomaly US08: Birth date of Devina /Vyas/(@I11@) occurs before the marriage date of his parents in Family @F8@
++Anomaly US08: Birth date of Denzy /Vyas/(@I13@) occurs before the marriage date of his parents in Family @F2@
++---------------------Child should be born before parents' divorce-----------------------------
