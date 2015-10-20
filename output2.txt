@@ -1,5 +1,3 @@
-//Output for US01 and US02
-
 TestFamily1.ged is being accessed
  Level :0  TAG :HEAD
  Level :0  TAG :NOTE
@@ -29,13 +27,11 @@ Syntax Error: Invalid Tag "CHAR"at line 13
  Level :1  TAG :NAME
  Level :1  TAG :SEX
  Level :1  TAG :BIRT
-Critical Error: Invalid parameters for the Tag : "DATE" at line 18
  Level :2  TAG :DATE
  Level :1  TAG :FAMC
  Level :0  TAG :INDI
  Level :1  TAG :NAME
  Level :1  TAG :SEX
-Critical Error: Date is missing for an event : "birt" at line 17
  Level :1  TAG :BIRT
  Level :2  TAG :DATE
  Level :1  TAG :FAMS
@@ -258,7 +254,7 @@ Individual Info
 Individual Id:		@I1@
 Name:			Varun Shah
 Gender:			M
-D.O.B:			null
+D.O.B:			1-NOV-1985
 D.O.D:			null
 Child of Family:	@F1@
 Spouse of Family:	null
@@ -280,7 +276,8 @@ Spouse of Family:	@F2@
 Individual Id:		@I3@
 Name:			Ketan Shah
 Gender:			M
-D.O.B:			1-SEP-1956
+Error US03:Birth date of Ketan Shah (I3) occurs after  death date.
+D.O.B:			1-SEP-1998
 D.O.D:			30-SEP-1992
 Child of Family:	@F3@
 Spouse of Family:	@F1@
@@ -324,7 +321,7 @@ Spouse of Family:	@F5@
 Individual Id:		@I7@
 Name:			Metan Shah
 Gender:			M
-D.O.B:			2-JAN-1962
+D.O.B:			2-JAN-1862
 D.O.D:			null
 Child of Family:	@F3@
 Spouse of Family:	@F6@
@@ -402,7 +399,7 @@ Spouse of Family:	null
 Individual Id:		@I14@
 Name:			Kalpna Shah
 Gender:			F
-D.O.B:			6-MAR-1965
+D.O.B:			6-MAR-1865
 D.O.D:			null
 Child of Family:	null
 Spouse of Family:	@F6@
@@ -469,7 +466,7 @@ Spouse of Family:	null
 Individual Id:		@I20@
 Name:			Darshana Shah
 Gender:			F
-D.O.B:			5-APR-1965
+D.O.B:			5-APR-1865
 D.O.D:			null
 Child of Family:	null
 Spouse of Family:	@F7@
@@ -498,6 +495,7 @@ Date of Marriage:	14-MAY-2000
 Error US02 : Birth date of Husband Nilesh Vyas (I9) should not be after marriage date
 Husband's Id:		@I9@ Nilesh Vyas
 Wife's Id:		@I2@ Bina Shah
+Anomaly US11:Bina Shah(I2) is already married to another spouse
 Id/s of Child/Children:	@I13@
 Date of Divorce:	null
 
@@ -510,6 +508,7 @@ Husband's Id:		@I5@ Navinchandra Shah
 Wife's Id:		@I4@ Prabhuta Shah
 Id/s of Child/Children:	@I3@~@I6@~@I7@~@I8@
 Date of Divorce:	null
+Anomaly US12 : Mother is too old 
 
 
 
@@ -540,6 +539,7 @@ Husband's Id:		@I7@ Metan Shah
 Wife's Id:		@I14@ Kalpna Shah
 Id/s of Child/Children:	@I15@
 Date of Divorce:	null
+Anomaly US12 : Parents are too old 
 
 
 
@@ -555,10 +555,13 @@ Date of Divorce:	null
 
 
 Family Id:		@F8@
-Date of Marriage:	5-FEB-1980
+Date of Marriage:	5-FEB-2024
+Error US01 : Marriage date of Nilesh Vyas (I9) and Smitha Vyas (I12) should not be after current date
 Error US02 : Birth date of Husband Nilesh Vyas (I9) should not be after marriage date
 Husband's Id:		@I9@ Nilesh Vyas
+Anomaly US11:Nilesh Vyas(I9) is already married to another spouse
 Wife's Id:		@I12@ Smitha Vyas
 Id/s of Child/Children:	@I11@
 Date of Divorce:	3-FEB-2022
 Error US01 : Divorce date of Nilesh Vyas (I9) and Smitha Vyas (I12) should not be after current date
+Error US04: Marriage date of Nilesh Vyas (I9) and Smitha Vyas (I12)occurs after their divorce.
