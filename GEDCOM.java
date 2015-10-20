@@ -1,34 +1,18 @@
-
-/* 
-
-This program reads the input GEDCOM text file as a command line argument and prints records, level numbers and tags on the output console.
-
-*/
-/*Trying to modify the program*/
-
-/* Test by Keyur Shah to modify the prog*/
-/* test by Ming.*/
-/* I have updated the code for P03. This should be our starting point to implement the stories*/
-
 import java.io.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
-
 class MainActivity
 {   
-	@SuppressWarnings("unchecked")
     public static boolean isNumeric(String str)
     {
     return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
-    @SuppressWarnings("unchecked")
     public static void main(String args[])
     {
         if(args.length==1)
         {
-        String filename=args[0]; 
-    	//String filename="TestFamily1.ged";
-        File f= new File(filename);
+        String filename=args[0];
+        File f=new File(filename);
         
            if(f.exists())
            {   int ln=0;
@@ -78,6 +62,9 @@ class MainActivity
                
                String ip="null";
                String fp="null";
+               
+               ArrayList<String> wife_list = new ArrayList<String>();
+               ArrayList<String> husband_list = new ArrayList<String>();
 
                //for printing
              /*  int linenumber=0;
@@ -501,14 +488,14 @@ class MainActivity
                  System.out.println("Individual Info");
                   for(int c=0;c<indi.size();c++)
                   {
-                      System.out.println("\n");
-                      System.out.println("\n");
+                  System.out.println("\n");
+                  System.out.println("\n");
                   String id=indi.get(c);
                   System.out.println("Individual Id:\t\t" +id);
                   System.out.println("Name:\t\t\t" + name.get(id));
                   System.out.println("Gender:\t\t\t" + sex.get(id));
                   
-                 String dob,dod;
+                  String dob,dod;
                   dob=birt.get(id).toString();
                   dod=deat.get(id).toString();
                   
@@ -516,14 +503,17 @@ class MainActivity
                   {
                       if( !birthvalidation(dod, dob))
                       {
-                          System.out.println("Error US03:Birth date of "+name.get(id)+" ("+id.replace("@","")+") occurs after death date.");
+                          System.out.println("Error US03:Birth date of "+name.get(id)+" ("+id.replace("@","")+") occurs after  death date.");
                         }
                     }
                     
-                    
                   System.out.println("D.O.B:\t\t\t" + dob);
                   
-         		//start: Added for US01
+                  
+                  
+                  
+                  
+                           		//start: Added for US01
                   if(dob.compareTo("null")!=0)
                  {   
                      if( !currentdatevalidation(dob))
@@ -533,8 +523,16 @@ class MainActivity
                    }
                   //end: Added for US01
                   
+                  
+                  
+                  
+                  
+                  
                   System.out.println("D.O.D:\t\t\t" + dod );
-
+                  
+                  
+                  
+                  
           		 //start: Added for US01
                   if(dod.compareTo("null")!=0)
                  {   
@@ -545,30 +543,38 @@ class MainActivity
                    }
                   //end: Added for US01
                   
+                  
+                  
                   System.out.println("Child of Family:\t" + famc.get(id));
                   System.out.println("Spouse of Family:\t" + fams.get(id));
                  }
                  
                  
-                     System.out.println("\n");
-                     System.out.println("\n");
+                 System.out.println("\n");
+                 System.out.println("\n");
                  System.out.println("Family Info");
                  for(int c=0;c<fam.size();c++)
                  {
-                     System.out.println("\n");
-                     System.out.println("\n");
+                  System.out.println("\n");
+                  System.out.println("\n");
                   String id=fam.get(c);  
                   System.out.println("Family Id:\t\t" +id);
                   
-                  String dom,dod,hdob,wdob;
+                  String dom,dod;
                   dom=marr.get(id).toString();
                   dod=div.get(id).toString();
-                  hdob=birt.get(husb.get(id)).toString(); //Added for US02
-                  wdob=birt.get(wife.get(id)).toString(); //Added for US02
+                  
                   System.out.println("Date of Marriage:\t" + marr.get(id));
                   
-                  //start: Added for US01 and US02
-                                    
+                  
+                  
+                  
+                  
+                   //start: Added for US01 and US02
+                  String hdob,wdob;
+                  
+                  hdob=birt.get(husb.get(id)).toString(); //Added for US02
+                  wdob=birt.get(wife.get(id)).toString(); //Added for US02
                   if(dom.compareTo("null")!=0)
                  {   
                      if( !currentdatevalidation(dom))
@@ -592,12 +598,32 @@ class MainActivity
                    }
                   //end: Added for US02
                   
+                  
+                  
+                  
+                  
+                  
+                  
+                  
                   System.out.println("Husband's Id:\t\t" + husb.get(id)+" "+name.get(husb.get(id)));
+                  if(husband_list.contains( husb.get(id)))
+                  {
+                      System.out.println("Anomaly US11:"+name.get(husb.get(id))+"("+(husb.get(id)).toString().replace("@","")+") is already married to another spouse");
+                    }
+                  husband_list.add(husb.get(id)+"");
                   System.out.println("Wife's Id:\t\t" + wife.get(id)+" "+name.get(wife.get(id)));
+                  if(wife_list.contains( wife.get(id)))
+                  {
+                      System.out.println("Anomaly US11:"+name.get(wife.get(id))+"("+(wife.get(id)).toString().replace("@","")+") is already married to another spouse");
+                    }
+                  wife_list.add(wife.get(id)+"");
                   System.out.println("Id/s of Child/Children:\t" + chil.get(id));
                   System.out.println("Date of Divorce:\t" + div.get(id));
                   
-         		 //start: Added for US01
+                  
+                  
+                  
+                  //start: Added for US01
                   
                   if(dod.compareTo("null")!=0)
                  {   
@@ -609,6 +635,8 @@ class MainActivity
                   
                 //end: Added for US01
                   
+                  
+                  
                    if((dod.compareTo("null")!=0)&&(dom.compareTo("null")!=0))
                   {
                       if( !birthvalidation(dod, dom))
@@ -616,6 +644,46 @@ class MainActivity
                           System.out.println("Error US04: Marriage date of "+name.get(husb.get(id))+" ("+(husb.get(id)).toString().replace("@","")+") and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+")occurs after their divorce.");
                         }
                     }
+                  
+                    
+                    //checking us12 : parents too old
+                    try{
+                 boolean moth=false;
+                 boolean fath=false;
+                  String children[]=(chil.get(id)).toString().split("~");
+                  for(int z=0;z<children.length;z++)
+                  {
+                 if( mAgeValidation((birt.get(wife.get(id))).toString(),(birt.get(children[z])).toString()))
+                 {
+                     
+                     moth=true;
+                    }
+                 if( fAgeValidation((birt.get(husb.get(id))).toString(),(birt.get(children[z])).toString()))
+                 {
+                      
+                      fath=true;
+                    }
+                  }
+                  
+                  if(moth&&fath)
+                  {
+                      System.out.println("Anomaly US12 : Parents are too old ");
+                    }
+                  if(moth&&!fath)
+                  {
+                      System.out.println("Anomaly US12 : Mother is too old ");
+                    }
+                    if(fath&&!moth)
+                    {
+                        System.out.println("Anomaly US12 : Father is too old ");
+                    }
+                  
+                }
+                catch(Exception e)
+                {
+                }
+                  
+                  
                   
                 }
                   
@@ -703,8 +771,69 @@ class MainActivity
                
          return true;
         }
-     
-     //start: Added for US01
+        
+        public static boolean mAgeValidation(String mother, String child )
+        {
+   
+               int m_year,c_year;
+               String[] array =mother.split("-");
+               m_year=Integer.parseInt(array[2]);
+               
+               String[] array2 = child.split("-");
+               c_year=Integer.parseInt(array2[2]);
+               
+               if(c_year-m_year<60)
+               {
+                     return false;
+                }
+
+        	
+        
+            return true;
+        }
+        public static boolean fAgeValidation(String father, String child )
+        {
+   
+               int f_year,c_year;
+               String[] array =father.split("-");
+               f_year=Integer.parseInt(array[2]);
+               
+               String[] array2 = child.split("-");
+               c_year=Integer.parseInt(array2[2]);
+               
+               if(c_year-f_year<80)
+               {
+                   return false;
+                }
+        	
+        
+            return true;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         //start: Added for US01
      
      public static boolean currentdatevalidation(String date)
      {
@@ -762,5 +891,6 @@ class MainActivity
         }
      
      //end: Added for US01
-     
+        
+        
 }
