@@ -34,6 +34,8 @@ Syntax Error: Invalid Tag "CHAR"at line 13
  Level :1  TAG :SEX
  Level :1  TAG :BIRT
  Level :2  TAG :DATE
+ Level :1  TAG :DEAT
+ Level :2  TAG :DATE
  Level :1  TAG :FAMS
  Level :1  TAG :FAMS
  Level :0  TAG :INDI
@@ -163,13 +165,13 @@ Syntax Error: Invalid Tag "CHAR"at line 13
  Level :1  TAG :CHIL
  Level :1  TAG :MARR
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "PLAC"at line 154
+Syntax Error: Invalid Tag "PLAC"at line 156
  Level :2  TAG :null
-Syntax Error: Invalid Tag "EVEN"at line 155
+Syntax Error: Invalid Tag "EVEN"at line 157
  Level :1  TAG :null
-Syntax Error: Invalid Tag "TYPE"at line 156
+Syntax Error: Invalid Tag "TYPE"at line 158
  Level :2  TAG :null
-Syntax Error: Invalid Tag "_CURRENT"at line 157
+Syntax Error: Invalid Tag "_CURRENT"at line 159
  Level :1  TAG :null
  Level :0  TAG :FAM
  Level :1  TAG :HUSB
@@ -177,7 +179,7 @@ Syntax Error: Invalid Tag "_CURRENT"at line 157
  Level :1  TAG :CHIL
  Level :1  TAG :MARR
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "_CURRENT"at line 164
+Syntax Error: Invalid Tag "_CURRENT"at line 166
  Level :1  TAG :null
  Level :0  TAG :FAM
  Level :1  TAG :HUSB
@@ -188,9 +190,9 @@ Syntax Error: Invalid Tag "_CURRENT"at line 164
  Level :1  TAG :CHIL
  Level :1  TAG :MARR
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "PLAC"at line 174
+Syntax Error: Invalid Tag "PLAC"at line 176
  Level :2  TAG :null
-Syntax Error: Invalid Tag "_CURRENT"at line 175
+Syntax Error: Invalid Tag "_CURRENT"at line 177
  Level :1  TAG :null
  Level :0  TAG :FAM
  Level :1  TAG :HUSB
@@ -198,9 +200,9 @@ Syntax Error: Invalid Tag "_CURRENT"at line 175
  Level :1  TAG :CHIL
  Level :1  TAG :MARR
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "PLAC"at line 182
+Syntax Error: Invalid Tag "PLAC"at line 184
  Level :2  TAG :null
-Syntax Error: Invalid Tag "_CURRENT"at line 183
+Syntax Error: Invalid Tag "_CURRENT"at line 185
  Level :1  TAG :null
  Level :0  TAG :FAM
  Level :1  TAG :HUSB
@@ -208,7 +210,7 @@ Syntax Error: Invalid Tag "_CURRENT"at line 183
  Level :1  TAG :CHIL
  Level :1  TAG :MARR
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "_CURRENT"at line 190
+Syntax Error: Invalid Tag "_CURRENT"at line 192
  Level :1  TAG :null
  Level :0  TAG :FAM
  Level :1  TAG :HUSB
@@ -216,18 +218,18 @@ Syntax Error: Invalid Tag "_CURRENT"at line 190
  Level :1  TAG :CHIL
  Level :1  TAG :MARR
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "PLAC"at line 197
+Syntax Error: Invalid Tag "PLAC"at line 199
  Level :2  TAG :null
-Syntax Error: Invalid Tag "_CURRENT"at line 198
+Syntax Error: Invalid Tag "_CURRENT"at line 200
  Level :1  TAG :null
  Level :0  TAG :FAM
  Level :1  TAG :HUSB
  Level :1  TAG :WIFE
  Level :1  TAG :MARR
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "PLAC"at line 204
+Syntax Error: Invalid Tag "PLAC"at line 206
  Level :2  TAG :null
-Syntax Error: Invalid Tag "_CURRENT"at line 205
+Syntax Error: Invalid Tag "_CURRENT"at line 207
  Level :1  TAG :null
  Level :0  TAG :FAM
  Level :1  TAG :HUSB
@@ -235,11 +237,11 @@ Syntax Error: Invalid Tag "_CURRENT"at line 205
  Level :1  TAG :CHIL
  Level :1  TAG :MARR
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "PLAC"at line 212
+Syntax Error: Invalid Tag "PLAC"at line 214
  Level :2  TAG :null
  Level :1  TAG :DIV
  Level :2  TAG :DATE
-Syntax Error: Invalid Tag "_CURRENT"at line 215
+Syntax Error: Invalid Tag "_CURRENT"at line 217
  Level :1  TAG :null
  Level :0  TAG :TRLR
 
@@ -266,7 +268,7 @@ Individual Id:		@I2@
 Name:			Bina Shah
 Gender:			F
 D.O.B:			12-NOV-1962
-D.O.D:			null
+D.O.D:			30-SEP-1992
 Child of Family:	null
 Spouse of Family:	@F2@
 
@@ -276,8 +278,7 @@ Spouse of Family:	@F2@
 Individual Id:		@I3@
 Name:			Ketan Shah
 Gender:			M
-Error US03:Birth date of Ketan Shah (I3) occurs after  death date.
-D.O.B:			1-SEP-1998
+D.O.B:			1-SEP-1956
 D.O.D:			30-SEP-1992
 Child of Family:	@F3@
 Spouse of Family:	@F1@
@@ -321,7 +322,7 @@ Spouse of Family:	@F5@
 Individual Id:		@I7@
 Name:			Metan Shah
 Gender:			M
-D.O.B:			2-JAN-1862
+D.O.B:			2-JAN-1962
 D.O.D:			null
 Child of Family:	@F3@
 Spouse of Family:	@F6@
@@ -355,7 +356,7 @@ Spouse of Family:	@F8@
 Individual Id:		@I10@
 Name:			Maitrik Shah
 Gender:			M
-D.O.B:			6-FEB-1988
+D.O.B:			6-FEB-2015
 D.O.D:			null
 Child of Family:	@F1@
 Spouse of Family:	null
@@ -486,6 +487,14 @@ Husband's Id:		@I3@ Ketan Shah
 Wife's Id:		@I2@ Bina Shah
 Id/s of Child/Children:	@I1@~@I10@
 Date of Divorce:	null
+Error US09: Birth date of Maitrik Shah (I10) should be within 9 months after death of father
+Error US09: Birth date of Maitrik Shah (I10) should be before death of mother
+Husband's Id:		@I3@ Ketan Shah
+Anomaly US11:Ketan Shah(I3) is already married to another spouse
+Wife's Id:		@I2@ Bina Shah
+Anomaly US11:Bina Shah(I2) is already married to another spouse
+Id/s of Child/Children:	@I1@~@I10@
+Date of Divorce:	null
 
 
 
@@ -493,11 +502,13 @@ Date of Divorce:	null
 Family Id:		@F2@
 Date of Marriage:	14-MAY-2000
 Error US02 : Birth date of Husband Nilesh Vyas (I9) should not be after marriage date
+Error US09: Birth date of Denzy Vyas (I13) should be before death of mother
 Husband's Id:		@I9@ Nilesh Vyas
 Wife's Id:		@I2@ Bina Shah
 Anomaly US11:Bina Shah(I2) is already married to another spouse
 Id/s of Child/Children:	@I13@
 Date of Divorce:	null
+Error US10: Marriage date of Nilesh Vyas (I9) should occur 14 years after Birth Date
 
 
 
@@ -508,7 +519,24 @@ Husband's Id:		@I5@ Navinchandra Shah
 Wife's Id:		@I4@ Prabhuta Shah
 Id/s of Child/Children:	@I3@~@I6@~@I7@~@I8@
 Date of Divorce:	null
-Anomaly US12 : Mother is too old 
+Husband's Id:		@I5@ Navinchandra Shah
+Anomaly US11:Navinchandra Shah(I5) is already married to another spouse
+Wife's Id:		@I4@ Prabhuta Shah
+Anomaly US11:Prabhuta Shah(I4) is already married to another spouse
+Id/s of Child/Children:	@I3@~@I6@~@I7@~@I8@
+Date of Divorce:	null
+Husband's Id:		@I5@ Navinchandra Shah
+Anomaly US11:Navinchandra Shah(I5) is already married to another spouse
+Wife's Id:		@I4@ Prabhuta Shah
+Anomaly US11:Prabhuta Shah(I4) is already married to another spouse
+Id/s of Child/Children:	@I3@~@I6@~@I7@~@I8@
+Date of Divorce:	null
+Husband's Id:		@I5@ Navinchandra Shah
+Anomaly US11:Navinchandra Shah(I5) is already married to another spouse
+Wife's Id:		@I4@ Prabhuta Shah
+Anomaly US11:Prabhuta Shah(I4) is already married to another spouse
+Id/s of Child/Children:	@I3@~@I6@~@I7@~@I8@
+Date of Divorce:	null
 
 
 
@@ -539,7 +567,7 @@ Husband's Id:		@I7@ Metan Shah
 Wife's Id:		@I14@ Kalpna Shah
 Id/s of Child/Children:	@I15@
 Date of Divorce:	null
-Anomaly US12 : Parents are too old 
+Anomaly US12 : Mother is too old 
 
 
 
@@ -555,8 +583,7 @@ Date of Divorce:	null
 
 
 Family Id:		@F8@
-Date of Marriage:	5-FEB-2024
-Error US01 : Marriage date of Nilesh Vyas (I9) and Smitha Vyas (I12) should not be after current date
+Date of Marriage:	5-FEB-1980
 Error US02 : Birth date of Husband Nilesh Vyas (I9) should not be after marriage date
 Husband's Id:		@I9@ Nilesh Vyas
 Anomaly US11:Nilesh Vyas(I9) is already married to another spouse
@@ -564,4 +591,4 @@ Wife's Id:		@I12@ Smitha Vyas
 Id/s of Child/Children:	@I11@
 Date of Divorce:	3-FEB-2022
 Error US01 : Divorce date of Nilesh Vyas (I9) and Smitha Vyas (I12) should not be after current date
-Error US04: Marriage date of Nilesh Vyas (I9) and Smitha Vyas (I12)occurs after their divorce.
+Error US10: Marriage date of Nilesh Vyas (I9) should occur 14 years after Birth Date

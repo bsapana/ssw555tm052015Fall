@@ -571,7 +571,7 @@ class MainActivity
                   
                   
                    //start: Added for US01 and US02
-                  String hdob,wdob;
+                  String hdob,wdob,cdob,childdob,hdod,wdod;
                   
                   hdob=birt.get(husb.get(id)).toString(); //Added for US02
                   wdob=birt.get(wife.get(id)).toString(); //Added for US02
@@ -598,11 +598,36 @@ class MainActivity
                    }
                   //end: Added for US02
                   
+                   //start: Added for US09  
+               
+               hdod=deat.get(husb.get(id)).toString(); 
+               wdod=deat.get(wife.get(id)).toString(); 
+               cdob=chil.get(id).toString(); 
+               String Str = new String(cdob);
+               for (String retval: Str.split("~")){
+               if(retval.compareTo("null")!=0){
+               childdob=birt.get(retval).toString();	   
+               if((hdod.compareTo("null")!=0)&&(childdob.compareTo("null")!=0))
+              {
+                  if( !childFatherBirthValidation(hdod, childdob))
+                  {
+                      System.out.println("Error US09: Birth date of "+name.get(retval)+" ("+retval.toString().replace("@","")+") should be within 9 months after death of father");
+                      // and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+")
+                  }
+                }
+               
+               if((wdod.compareTo("null")!=0)&&(childdob.compareTo("null")!=0))
+              {
+                  if( !childMotherBirthValidation(wdod, childdob))
+                  {
+                      System.out.println("Error US09: Birth date of "+name.get(retval)+" ("+retval.toString().replace("@","")+") should be before death of mother");
+                      // and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+")
+                  }
+                }
+              }
+             //end: Added by US09
                   
-                  
-                  
-                  
-                  
+                         
                   
                   
                   System.out.println("Husband's Id:\t\t" + husb.get(id)+" "+name.get(husb.get(id)));
@@ -635,7 +660,27 @@ class MainActivity
                   
                 //end: Added for US01
                   
-                  
+                  //start: Added for US10  
+               
+               if((hdob.compareTo("null")!=0)&&(dom.compareTo("null")!=0))
+              {
+                  if( !marriageAgeValidation(hdob, dom))
+                  {
+                      System.out.println("Error US10: Marriage date of "+name.get(husb.get(id))+" ("+(husb.get(id)).toString().replace("@","")+") should occur 14 years after Birth Date");
+                      // and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+")
+                  }
+                }
+               
+               if((wdob.compareTo("null")!=0)&&(dom.compareTo("null")!=0))
+              {
+                  if( !marriageAgeValidation(wdob, dom))
+                  {
+                      System.out.println("Error US10: Marriage date of "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+") should occur 14 years after Birth Date");
+                      // and "+name.get(wife.get(id))+" ("+(wife.get(id)).toString().replace("@","")+")
+                  }
+                }
+               //end: Added by US10
+
                   
                    if((dod.compareTo("null")!=0)&&(dom.compareTo("null")!=0))
                   {
@@ -891,6 +936,205 @@ class MainActivity
         }
      
      //end: Added for US01
-        
-        
+
+//start: Added for US10
+  
+  public static boolean marriageAgeValidation(String birth, String marriage )
+  {
+      try
+      {
+      ArrayList<String> month = new ArrayList<String>();
+            month.add("JAN");
+            month.add("FEB");
+            month.add("MAR");
+            month.add("APR");
+            month.add("MAY");
+            month.add("JUN");
+            month.add("JUL");
+            month.add("AUG");
+            month.add("SEP");
+            month.add("OCT");
+            month.add("NOV");
+            month.add("DEC");
+
+            int marriage_day,marriage_month,marriage_year,birth_day,birth_month,birth_year;
+            String[] array = marriage.split("-");
+            
+            if(array[0].length()<2)
+            {
+         	   marriage_day=Integer.parseInt(0+array[0]);
+            }
+            else
+            {
+         	   marriage_day=Integer.parseInt(array[0]);
+             }
+            
+            
+            marriage_month=(month.indexOf(array[1])+1);
+            marriage_year=Integer.parseInt(array[2]);
+            
+            String[] array2 = birth.split("-");
+            if(array2[0].length()<2)
+            {
+            birth_day=Integer.parseInt(0+array2[0]);
+            }
+            else
+            {
+            birth_day=Integer.parseInt(array2[0]);
+             }
+            birth_month=(month.indexOf(array2[1])+1);
+            birth_year=Integer.parseInt(array2[2]);
+            
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+     	Date marriage_date = sdf.parse( marriage_year+"-"+marriage_month+"-"+marriage_day);
+     	//Date birth_date = sdf.parse( birth_year+"-"+birth_month+"-"+birth_day);
+     	Date marriage_eligible_date = sdf.parse( (birth_year+14)+"-"+birth_month+"-"+(birth_day+1));
+     	
+     	if(marriage_eligible_date.compareTo(marriage_date)>0){
+     		return false;
+             }
+     	
+     }
+     catch(Exception e)
+     {
+         System.out.println("Error in marriageagevalidation() :"+e.getMessage() );
+     }
+            
+      return true;
+     }
+  
+  	//end: Added for US10
+  
+  	//start: Added for US09
+  
+  public static boolean childFatherBirthValidation(String hdod, String childdob )
+  {
+      try
+      {
+      ArrayList<String> month = new ArrayList<String>();
+            month.add("JAN");
+            month.add("FEB");
+            month.add("MAR");
+            month.add("APR");
+            month.add("MAY");
+            month.add("JUN");
+            month.add("JUL");
+            month.add("AUG");
+            month.add("SEP");
+            month.add("OCT");
+            month.add("NOV");
+            month.add("DEC");
+
+            int death_day,death_month,death_year,birth_day,birth_month,birth_year;
+            String[] array = hdod.split("-");
+            
+            if(array[0].length()<2)
+            {
+         	   death_day=Integer.parseInt(0+array[0]);
+            }
+            else
+            {
+         	   death_day=Integer.parseInt(array[0]);
+             }
+            
+            
+            death_month=(month.indexOf(array[1])+1);
+            death_year=Integer.parseInt(array[2]);
+            
+            String[] array2 = childdob.split("-");
+            if(array2[0].length()<2)
+            {
+            birth_day=Integer.parseInt(0+array2[0]);
+            }
+            else
+            {
+            birth_day=Integer.parseInt(array2[0]);
+             }
+            birth_month=(month.indexOf(array2[1])+1);
+            birth_year=Integer.parseInt(array2[2]);
+            
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+     	//Date death_date = sdf.parse( death_year+"-"+death_month+"-"+death_day);
+     	Date birth_date = sdf.parse( birth_year+"-"+birth_month+"-"+birth_day);
+     	Date childbirth_eligible_date = sdf.parse( death_year+"-"+(death_month+9)+"-"+(death_day-1));
+     	
+     	if(birth_date.compareTo(childbirth_eligible_date)>0){
+     		return false;
+             }
+     	
+     }
+     catch(Exception e)
+     {
+         System.out.println("Error in childFatherBirthValidation() :"+e.getMessage() );
+     }
+            
+      return true;
+     }
+  
+  public static boolean childMotherBirthValidation(String wdod, String childdob )
+  {
+      try
+      {
+          ArrayList<String> month = new ArrayList<String>();
+                month.add("JAN");
+                month.add("FEB");
+                month.add("MAR");
+                month.add("APR");
+                month.add("MAY");
+                month.add("JUN");
+                month.add("JUL");
+                month.add("AUG");
+                month.add("SEP");
+                month.add("OCT");
+                month.add("NOV");
+                month.add("DEC");
+
+                int death_day,death_month,death_year,birth_day,birth_month,birth_year;
+                String[] array = wdod.split("-");
+                
+                if(array[0].length()<2)
+                {
+             	   death_day=Integer.parseInt(0+array[0]);
+                }
+                else
+                {
+             	   death_day=Integer.parseInt(array[0]);
+                 }
+                
+                
+                death_month=(month.indexOf(array[1])+1);
+                death_year=Integer.parseInt(array[2]);
+                
+                String[] array2 = childdob.split("-");
+                if(array2[0].length()<2)
+                {
+                birth_day=Integer.parseInt(0+array2[0]);
+                }
+                else
+                {
+                birth_day=Integer.parseInt(array2[0]);
+                 }
+                birth_month=(month.indexOf(array2[1])+1);
+                birth_year=Integer.parseInt(array2[2]);
+                
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+         	Date death_date = sdf.parse( death_year+"-"+death_month+"-"+death_day);
+         	Date child_birth_date = sdf.parse( birth_year+"-"+birth_month+"-"+birth_day);
+         	//Date childbirth_eligible_date = sdf.parse( birth_year+"-"+birth_month+"-"+birth_day);
+         	
+         	if(child_birth_date.compareTo(death_date)>0){
+         		return false;
+                 }
+         	
+         }
+     catch(Exception e)
+     {
+         System.out.println("Error in childMotherBirthValidation() :"+e.getMessage() );
+     }
+            
+      return true;
+     }
+  
+  	//end: Added for US09        
+       
 }
