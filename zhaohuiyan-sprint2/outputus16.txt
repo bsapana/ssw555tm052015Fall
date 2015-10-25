@@ -1,1 +1,3 @@
 --------------ERROR:Male members have the same last name in one family-----------------------
+ERROR: There are 3 last names in @F1@! All male members of family should have the same last name
+ERROR: There are 2 last names in @F3@! All male members of family should have the same last name
