@@ -312,7 +312,7 @@ public class MainC {
 				if(fam.getChild().size()<5){
 					writeToFile("***************************NO ERROR: User Story US14: No more than five siblings should be born at the same time****************************\n");
 				}else{
-					writeToFile("***************************NO ERROR: User Story US14: No more than five siblings should be born at the same time****************************\nFamily ID: "
+					writeToFile("***************************ERROR: User Story US14: No more than five siblings should be born at the same time****************************\nFamily ID: "
 												+ fam.getId() + "\nIndividual: " + indi.getId() + ": " + indi.getName() + "born at same time");
 				}
 			}
