@@ -1,0 +1,210 @@
+*************************************************LINES****************************************************
+0 HEAD
+Level: 0
+TAG: HEAD
+
+0 NOTE SSW555tm052015Fall
+Level: 0
+TAG: NOTE
+
+1 SOUR Family Echo
+Level: 1
+TAG: INVALID
+
+1 FILE My Family
+Level: 1
+TAG: INVALID
+
+1 DATE 16 SEP 2015
+Level: 1
+TAG: DATE
+
+1 DEST ANSTFILE
+Level: 1
+TAG: INVALID
+
+1 GEDC
+Level: 1
+TAG: INVALID
+
+2 VERS 5.5.1
+Level: 2
+TAG: INVALID
+
+2 FORM LINEAGE-LINKED
+Level: 2
+TAG: INVALID
+
+1 SUBM @I1@
+Level: 1
+TAG: INVALID
+
+2 NAME Varun Shah
+Level: 2
+TAG: NAME
+
+1 SUBN
+Level: 1
+TAG: INVALID
+
+1 CHAR UTF-8
+Level: 1
+TAG: INVALID
+
+0 @I1@ INDI
+Level: 0
+TAG: INDI
+
+0 @I2@ INDI
+Level: 0
+TAG: INDI
+
+0 @I3@ INDI
+Level: 0
+TAG: INDI
+
+0 @I4@ INDI
+Level: 0
+TAG: INDI
+
+0 @I5@ INDI
+Level: 0
+TAG: INDI
+
+0 @I6@ INDI
+Level: 0
+TAG: INDI
+
+0 @I7@ INDI
+Level: 0
+TAG: INDI
+
+0 @I8@ INDI
+Level: 0
+TAG: INDI
+
+0 @I9@ INDI
+Level: 0
+TAG: INDI
+
+0 @I10@ INDI
+Level: 0
+TAG: INDI
+
+0 @I11@ INDI
+Level: 0
+TAG: INDI
+
+0 @I12@ INDI
+Level: 0
+TAG: INDI
+
+0 @I13@ INDI
+Level: 0
+TAG: INDI
+
+0 @I14@ INDI
+Level: 0
+TAG: INDI
+
+0 @I15@ INDI
+Level: 0
+TAG: INDI
+
+0 @I16@ INDI
+Level: 0
+TAG: INDI
+
+0 @I17@ INDI
+Level: 0
+TAG: INDI
+
+0 @I18@ INDI
+Level: 0
+TAG: INDI
+
+0 @I19@ INDI
+Level: 0
+TAG: INDI
+
+0 @I20@ INDI
+Level: 0
+TAG: INDI
+
+0 @F1@ FAM
+Level: 0
+TAG: FAM
+
+0 @F2@ FAM
+Level: 0
+TAG: FAM
+
+0 @F3@ FAM
+Level: 0
+TAG: FAM
+
+0 @F4@ FAM
+Level: 0
+TAG: FAM
+
+0 @F5@ FAM
+Level: 0
+TAG: FAM
+
+0 @F6@ FAM
+Level: 0
+TAG: FAM
+
+0 @F7@ FAM
+Level: 0
+TAG: FAM
+
+0 @F8@ FAM
+Level: 0
+TAG: FAM
+
+0 TRLR
+Level: 0
+TAG: TRLR
+
+**********************************************************************************************************
+
+*********************************************INDIVIDUALS**************************************************
+@I10@ -  Name: Maitrik Shah, Sex: M, DOB: 02/6/2015, DOD: null, Spouse of: null, Child of: @F1@
+@I11@ -  Name: Devina Vyas, Sex: F, DOB: 05/10/1981, DOD: null, Spouse of: null, Child of: @F8@
+@I12@ -  Name: Smitha Vyas, Sex: F, DOB: 05/5/1962, DOD: null, Spouse of: @F8@, Child of: null
+@I13@ -  Name: Denzy Vyas, Sex: M, DOB: 10/3/1995, DOD: null, Spouse of: null, Child of: @F2@
+@I14@ -  Name: Kalpna Shah, Sex: F, DOB: 03/6/1865, DOD: null, Spouse of: @F6@, Child of: null
+@I15@ -  Name: Krupal Shah, Sex: F, DOB: 02/29/1996, DOD: null, Spouse of: null, Child of: @F6@
+@I16@ -  Name: Shilpa Shah, Sex: F, DOB: 04/4/1962, DOD: null, Spouse of: @F5@, Child of: null
+@I17@ -  Name: Hasmukh Shah, Sex: F, DOB: 01/3/1930, DOD: 03/5/2013, Spouse of: @F4@, Child of: null
+@I18@ -  Name: Manu echa, Sex: M, DOB: 02/2/1910, DOD: 03/2/2020, Spouse of: @F4@, Child of: null
+@I19@ -  Name: Adit Shah, Sex: M, DOB: 04/17/1996, DOD: null, Spouse of: null, Child of: @F5@
+@I1@ -  Name: Varun hShah, Sex: M, DOB: 11/1/1985, DOD: null, Spouse of: null, Child of: @F1@
+@I20@ -  Name: Darshana Shah, Sex: F, DOB: 04/5/1865, DOD: null, Spouse of: @F7@, Child of: null
+@I2@ -  Name: Bina Shah, Sex: F, DOB: 11/12/1962, DOD: 09/30/1992, Spouse of: @F2@, Child of: null
+@I3@ -  Name: Ketan 5Shah, Sex: M, DOB: 09/1/1956, DOD: 09/30/1992, Spouse of: @F1@, Child of: @F3@
+@I4@ -  Name: Prabhuta Shah, Sex: F, DOB: 04/8/1935, DOD: null, Spouse of: @F3@, Child of: null
+@I5@ -  Name: Navinchandra Shah, Sex: M, DOB: 04/9/1930, DOD: null, Spouse of: @F3@, Child of: @F4@
+@I6@ -  Name: Chetan Shah, Sex: M, DOB: 01/1/1960, DOD: null, Spouse of: @F5@, Child of: @F3@
+@I7@ -  Name: Metan Shah, Sex: M, DOB: 01/2/1962, DOD: null, Spouse of: @F6@, Child of: @F3@
+@I8@ -  Name: Keshav Shah, Sex: M, DOB: 02/1/1965, DOD: null, Spouse of: @F7@, Child of: @F3@
+@I9@ -  Name: Nilesh Vyas, Sex: M, DOB: 05/14/2958, DOD: null, Spouse of: @F8@, Child of: null
+**********************************************************************************************************
+
+*********************************************FAMILIES*****************************************************
+@F1@ - Husband: @I3@, Wife: @I2@, Children: [@I1@, @I10@], Marriage Date: 04/14/2017, Divorce Date: null
+@F2@ - Husband: @I9@, Wife: @I2@, Children: [@I13@], Marriage Date: 05/14/2000, Divorce Date: null
+@F3@ - Husband: @I5@, Wife: @I4@, Children: [@I3@, @I6@, @I7@, @I8@], Marriage Date: 01/6/1955, Divorce Date: null
+@F4@ - Husband: @I18@, Wife: @I17@, Children: [@I5@], Marriage Date: 02/5/1945, Divorce Date: null
+@F5@ - Husband: @I6@, Wife: @I16@, Children: [@I19@], Marriage Date: 04/4/1990, Divorce Date: null
+@F6@ - Husband: @I7@, Wife: @I14@, Children: [@I15@], Marriage Date: 02/2/1995, Divorce Date: null
+@F7@ - Husband: @I8@, Wife: @I20@, Children: null, Marriage Date: 02/3/1990, Divorce Date: null
+@F8@ - Husband: @I9@, Wife: @I12@, Children: [@I11@], Marriage Date: 02/5/1980, Divorce Date: 02/3/2022
+**********************************************************************************************************
+
+***************************NO ERROR: User Story US13: Birth dates of siblings should be more than 8 months apart or less than 2 days apart****************************
+
+***************************NO ERROR: User Story US14: No more than five siblings should be born at the same time****************************
+
+
