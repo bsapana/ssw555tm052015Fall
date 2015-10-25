@@ -206,6 +206,6 @@ TAG: TRLR
 *************************** ERROR: User Story US13: Birth dates of siblings should be more than 8 months apart or less than 2 days apart****************************
 
 Days greater than 2:@I1@, @I10@ DiffDay
-***************************ERROR: User Story US14: No more than five siblings should be born at the same time****************************
+***************************NO ERROR: User Story US14: No more than five siblings should be born at the same time****************************
 
 
