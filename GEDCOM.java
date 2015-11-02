@@ -597,6 +597,55 @@ class MainActivity
                      }
                    }
                   //end: Added for US02
+
+		System.out.println("Husband's Id:\t\t" + husb.get(id)+" "+name.get(husb.get(id)));
+               System.out.println("Wife's Id:\t\t" + wife.get(id)+" "+name.get(wife.get(id)));
+               System.out.println("Id/s of Child/Children:\t" + chil.get(id));
+               
+               //start: Added for US17
+               
+               String Str1 = chil.get(id).toString().replace("@","");
+               for (String child: Str1.split("~")){
+               if(child.compareTo("null")!=0){
+	                  if((husb.get(id).toString().replace("@","")).equalsIgnoreCase(child))
+	                  	{
+	                	  System.out.println("Error US17 : Wife ("+wife.get(id).toString().replace("@", "")+") should not marry any of their descendants ("+child+")");
+	                  	}
+	                  if((wife.get(id).toString().replace("@","")).equalsIgnoreCase(child))
+	                  	{
+	                	  System.out.println("Error US17 : Husband ("+husb.get(id).toString().replace("@", "")+") should not marry any of their descendants ("+child+")");
+	                  	}	                  
+               	  }
+                 }
+               
+               //end: Added for US17
+               
+               //start: Added for US18
+               
+               String Str2 = chil.get(id).toString().replace("@","");
+               boolean husbandIsSibling = false;
+               boolean wifeIsSibling = false;
+               
+               for (String child: Str2.split("~")){
+               if(child.compareTo("null")!=0){
+	                  if((husb.get(id).toString().replace("@","")).equalsIgnoreCase(child))
+	                  	{
+	                      husbandIsSibling = true;
+	                  	}
+	                  if((wife.get(id).toString().replace("@","")).equalsIgnoreCase(child))
+	                  	{
+	                      wifeIsSibling = true;
+	                  	}
+              	  }
+                 }
+               	if (husbandIsSibling && wifeIsSibling){
+               		System.out.println("Error US18 : Husband ("+husb.get(id).toString().replace("@", "")+") and Wife ("+wife.get(id).toString().replace("@", "")+") are siblings and should not marry one another ");
+               	}
+               
+               //end: Added for US18
+               
+               System.out.println("Date of Divorce:\t" + div.get(id));
+
                   
                    //start: Added for US09  
                
@@ -627,8 +676,152 @@ class MainActivity
               }
              //end: Added by US09
                   
-                         
-                  
+                   //us19
+               try{
+               ArrayList<String> cousins = new ArrayList<String>();
+               String familyid_of_hus=famc.get(husb.get(id)).toString();
+             //System.out.println("Husband belongs to family : "+familyid_of_hus);
+             String dad=husb.get(familyid_of_hus).toString();
+             //System.out.println("Husband's dad is: "+dad);
+             String familyid=famc.get(dad).toString();
+             String siblings=chil.get(familyid).toString();
+              //System.out.println("Siblings of husband's dad : "+siblings);
+               String sibarray[]=siblings.split("~");
+               for(int cou=0;cou<sibarray.length;cou++)
+               {
+                   try{
+                   if(sibarray[cou].compareTo((husb.get(id)).toString())!=0)
+                   {
+                   String familyofsib=(fams.get(sibarray[cou])).toString();
+                  //System.out.println("Family of Sibling "+sibarray[cou]+" where he/she is a spouse : "+familyofsib);
+                   String possiblecousins=chil.get(familyofsib).toString();
+                   //System.out.println("cousins of "+(husb.get(id))+"are"+possiblecousins);
+                   String cousarr[]=possiblecousins.split("~");
+                   for(int cou2=0;cou2<cousarr.length;cou2++)
+                   {
+                      // System.out.println(cousarr[cou2]+ " is a cousin of husband");
+                      cousins.add(cousarr[cou2]);
+                     }
+                   
+                 }
+                 }
+                 catch(Exception e)
+                 {
+                 }
+             }
+               
+                 if(cousins.contains(wife.get(id)))
+                 {
+                     System.out.println("Anomaly US19: First Cousins are married to one another");
+                 }
+                 
+             }
+             catch(Exception e)
+             {
+             }
+               
+               //us19 ends here
+               
+               
+               //us20 phase1
+               try
+               {
+               ArrayList<String> ne= new ArrayList<String>();
+               String familyid_of_hus=famc.get(husb.get(id)).toString(); 
+               String siblings=chil.get(familyid_of_hus).toString();
+               //System.out.println("Siblings of Husband : "+siblings);
+               String sibarray[]=siblings.split("~");
+                for(int cou=0;cou<sibarray.length;cou++)
+                {
+                   try
+                   {
+                   if(sibarray[cou].compareTo((husb.get(id)).toString())!=0)
+                   {
+                     
+                       String familyofsib=(fams.get(sibarray[cou])).toString();
+                      // System.out.println("Family of Sibling "+sibarray[cou] +" : "+familyofsib);
+                       String possible_nes=chil.get(familyofsib).toString();
+                      // System.out.println("Set of ne : "+possible_nes);
+                       String nearr[]=possible_nes.split("~");
+                     for(int cou2=0;cou2<nearr.length;cou2++)
+                     {
+                    // System.out.println(nearr[cou2]+ " is a neice/nephew of husband");
+                      ne.add(nearr[cou2]);
+                     }
+                     }
+                 }
+                 catch(Exception e)
+                 {
+
+                 }
+
+                 }
+                 
+                   if(ne.contains(wife.get(id)))
+                 {
+                     System.out.println("Anomaly US20: Aunts and uncles should not marry their nieces or nephews");
+                 }
+                 
+                 }
+                 catch(Exception e)
+                 {
+                     
+                 }
+               
+                 //us20 phase1 ends here
+                 
+                 //us20  phase2
+                 
+                 
+               try
+               {
+               ArrayList<String> ne= new ArrayList<String>();
+               String familyid_of_hus=famc.get(wife.get(id)).toString(); 
+               String siblings=chil.get(familyid_of_hus).toString();
+              // System.out.println("Siblings of wife : "+siblings);
+               String sibarray[]=siblings.split("~");
+                for(int cou=0;cou<sibarray.length;cou++)
+                {
+                   try
+                   {
+                   if(sibarray[cou].compareTo((husb.get(id)).toString())!=0)
+                   {
+                     
+                       String familyofsib=(fams.get(sibarray[cou])).toString();
+                      // System.out.println("Family of Sibling "+sibarray[cou] +" : "+familyofsib);
+                       String possible_nes=chil.get(familyofsib).toString();
+                     //  System.out.println("Set of ne : "+possible_nes);
+                       String nearr[]=possible_nes.split("~");
+                     for(int cou2=0;cou2<nearr.length;cou2++)
+                     {
+                  //   System.out.println(nearr[cou2]+ " is a neice/nephew of wife");
+                      ne.add(nearr[cou2]);
+                     }
+                     }
+                 }
+                 catch(Exception e)
+                 {
+
+                 }
+
+                 }
+                 
+                   if(ne.contains(husb.get(id)))
+                 {
+                     System.out.println("Anomaly US20: Aunts and uncles should not marry their nieces or nephews");
+                 }
+                 
+                 }
+                 catch(Exception e)
+                 {
+                     
+                 }
+                 
+              
+                 
+               //US20 phase2 ends here
+               
+                                 
                   
                   System.out.println("Husband's Id:\t\t" + husb.get(id)+" "+name.get(husb.get(id)));
                   if(husband_list.contains( husb.get(id)))
