@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class MainC {
+public class dadadad {
 	// lists to hold data
 	private static HashMap<String, family> families = new HashMap<String, family>();
 	private static HashMap<String, individual> individuals = new HashMap<String, individual>();
@@ -35,9 +35,10 @@ public class MainC {
 			createNewOutputFile();
 			readAndParseFile(fileName);
 			printMaps();
-			siblingSpacing(families);
-			multiplebirthslessthan5(families);
-		
+			//siblingSpacing(families);
+		   // multiplebirthslessthan5(families);
+			marriageBeforeDeath(families);	
+			checkrightgender(families);
 
 		} catch (FileNotFoundException ex) {
 			System.out.println("File Not Found. Please Check Path and Filename");
@@ -245,8 +246,8 @@ public class MainC {
 	}
 
 	// USER STORY METHODS
-
-	static void siblingSpacing(HashMap<String, family> families) throws ParseException, FileNotFoundException, IOException {
+//US 13
+	/*static void siblingSpacing(HashMap<String, family> families) throws ParseException, FileNotFoundException, IOException {
 		Map<String, family> famMap = new HashMap<String, family>(families);
 		Iterator<Map.Entry<String, family>> famEntries = famMap.entrySet().iterator();
 		Date sib1;
@@ -293,8 +294,10 @@ public class MainC {
 				childMap=null;
 			}
 		}
-	}
-	static void multiplebirthslessthan5(HashMap<String, family> families) throws ParseException, FileNotFoundException, IOException {
+	}*/
+	
+	// US 14
+	/*static void multiplebirthslessthan5(HashMap<String, family> families) throws ParseException, FileNotFoundException, IOException {
 		Map<String, family> famMap = new HashMap<String, family>(families);
 		Iterator<Map.Entry<String, family>> famEntries = famMap.entrySet().iterator();
 		Date birthDate = null;
@@ -320,4 +323,96 @@ public class MainC {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-}}}
+}}*/
+	static void marriageBeforeDeath(HashMap<String, family> families) throws FileNotFoundException, IOException {
+		//  US05 - Marriage Date Before Death
+		Date marriageDate = null;
+		Date deathDate = null;
+		Map<String, family> famMap = new HashMap<String, family>(families);
+		Iterator<Map.Entry<String, family>> famEntries = famMap.entrySet().iterator();
+		while (famEntries.hasNext()) {
+			Map.Entry<String, family> famEntry = famEntries.next();
+			family fam = famEntry.getValue();
+			try {
+				marriageDate = sdf.parse(fam.getMarriage());
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			individual ind = individuals.get(fam.getHusb());
+			individual ind2 = individuals.get(fam.getWife());
+			if ((fam.getHusb().equals(ind.getId()) && ind.getDeath() != null)
+					|| (fam.getWife().equals(ind2.getId()) && ind2.getDeath() != null)) {
+				try {
+					if (ind.getDeath() != null) {
+						deathDate = sdf.parse(ind.getDeath());
+						if (marriageDate.after(deathDate)) {
+							writeToFile(
+									"***************************ERROR: User Story US05: Death before Marriage Date*****************************\nFamily ID: "
+											+ fam.getId() + "\nIndividual: " + ind.getId() + " - " + ind.getName()
+											+ " Has been dead since: " + ind.getDeath() + " And they were married on: "
+											+ fam.getMarriage()
+											+ "\n**********************************************************************************************************\n");
+						}
+					}
+					if (ind2.getDeath() != null) {
+						deathDate = sdf.parse(ind2.getDeath());
+						if (marriageDate.after(deathDate)) {
+							writeToFile(
+									"***************************ERROR: User Story US05: Death before Marriage Date*****************************\nFamily ID: "
+											+ fam.getId() + "\nIndividual: " + ind2.getId() + " - " + ind2.getName()
+											+ " Has been dead since: " + ind2.getDeath() + " And they were married on: "
+											+ fam.getMarriage()
+											+ "\n**********************************************************************************************************\n");
+						}
+					}
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	//US 21 Husband in family should be male and wife in family should be famale.
+	static void checkrightgender(HashMap<String, family> families) throws FileNotFoundException, IOException{
+		Map<String, family> famMap = new HashMap<String, family>(families);
+		Iterator<Map.Entry<String, family>> famEntries = famMap.entrySet().iterator();
+		while (famEntries.hasNext()) {
+			Map.Entry<String, family> famEntry = famEntries.next();
+			family fam = famEntry.getValue();
+			individual ind = individuals.get(fam.getHusb());
+			individual ind2 = individuals.get(fam.getWife());
+			
+		/*	if(fam.getHusb().equals(ind.getId()) && fam.getWife().equals(ind2.getId())){
+				if(ind.getSex()== "M" && ind2.getSex() == "M"){
+					writeToFile("***************************ERROR: User Story US21: Husband is male and Wife is famale*****************************\nFamily ID : "+
+							fam.getId() + " "+ "Wife "+fam.getWife()+ "is "+ ind2.getSex());
+				}
+				if(ind.getSex() == "F" && ind2.getSex()== "F"){
+					writeToFile("***************************ERROR: User Story US21: Husband is male and Wife is famale*****************************\nFamily ID : "+
+							fam.getId() + " "+ "Husband " +fam.getHusb()+ "is " + ind.getSex());
+				}
+				if (ind.getSex() == "F" && ind2.getSex() == "M"){
+					writeToFile("***************************ERROR: User Story US21: Husband is male and Wife is famale*****************************\nFamily ID : "+
+							fam.getId() + " "+ "Husband " + fam.getHusb()+ "is " +ind.getSex()+ " and "+ 
+							"Wife " +fam.getWife()+ "is " + ind2.getSex());
+				}
+			}*/
+			if (fam.getHusb().equals(ind.getSex()) && !fam.getWife().equals(ind2.getSex())){
+				writeToFile("***************************ERROR: User Story US21: Husband is male and Wife is famale*****************************\nFamily ID : "+
+			fam.getId() + " "+ "Wife "+fam.getWife()+ "is "+ ind2.getSex());
+			}
+				 if (!fam.getHusb().equals(ind.getSex()) && fam.getWife().equals(ind2.getSex())){
+					writeToFile("***************************ERROR: User Story US21: Husband is male and Wife is famale*****************************\nFamily ID : "+
+				fam.getId() + " "+ "Husband " +fam.getHusb()+ "is " + ind.getSex());
+					
+				}
+				if(!fam.getHusb().equals(ind.getSex()) && !fam.getWife().equals(ind2.getSex())){
+					writeToFile("***************************ERROR: User Story US21: Husband is male and Wife is famale*****************************\nFamily ID : "+
+							fam.getId() + " "+ "Husband " + fam.getHusb()+ "is " +ind.getSex()+ " and "+ 
+							"Wife " +fam.getWife()+ "is " + ind2.getSex());
+				}
+			}
+		
+	}
+}
