@@ -1,0 +1,2 @@
+--------------ERROR:All individual IDs should be unique -----------------------
+--------------ERROR:All family IDs should be unique-----------------------
