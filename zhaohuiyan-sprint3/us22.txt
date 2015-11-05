@@ -1,1 +1,3 @@
---------------ERROR:Husband in family should be male and wife in family should be female -----------------------
+--------------ERROR:All individual IDs should be unique -----------------------
+individua ID @I16@ is not unique and there are  2 @I16@
+--------------ERROR:All family IDs should be unique-----------------------
