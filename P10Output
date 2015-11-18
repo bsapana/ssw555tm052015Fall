@@ -1,0 +1,835 @@
+TestFamily2.ged is being accessed
+ Level :0  TAG :HEAD
+Syntax Error: Invalid Tag "SSW555tm052015Fall"at line 2
+ Level :0  TAG :null
+Syntax Error: Invalid Tag "SOUR"at line 3
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "FILE"at line 4
+ Level :1  TAG :null
+Critical Error: Date is not pointed to any event at line 5
+ Level :1  TAG :DATE
+Syntax Error: Invalid Tag "DEST"at line 6
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "GEDC"at line 7
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "VERS"at line 8
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "FORM"at line 9
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SUBM"at line 10
+ Level :1  TAG :null
+Critical Error: Unique Id not set for the tag : "NAME" at line 11
+ Level :2  TAG :NAME
+Syntax Error: Invalid Tag "SUBN"at line 12
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "CHAR"at line 13
+ Level :1  TAG :null
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 16
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 17
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 18
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 25
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 26
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 27
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 36
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 37
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 38
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :DEAT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 49
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 50
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 51
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 58
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 59
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 60
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 68
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 69
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 70
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 78
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 79
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 80
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 88
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 89
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 90
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 98
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 99
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 100
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 108
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 109
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 110
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 117
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 118
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 119
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 126
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 127
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 128
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 135
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 136
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 137
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 144
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 145
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 146
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 153
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 154
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 155
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 162
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 163
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 164
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 171
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 172
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 173
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :DEAT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 182
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 183
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 184
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :DEAT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 193
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 194
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 195
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 203
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 204
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 205
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 212
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 213
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 214
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 222
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 223
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 224
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :INDI
+ Level :1  TAG :NAME
+Syntax Error: Invalid Tag "GIVN"at line 232
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "SURN"at line 233
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_MARNM"at line 234
+ Level :2  TAG :null
+ Level :1  TAG :SEX
+ Level :1  TAG :BIRT
+ Level :2  TAG :DATE
+ Level :1  TAG :FAMS
+ Level :1  TAG :FAMC
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 249
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "EVEN"at line 250
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "TYPE"at line 251
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 252
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 259
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 260
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 271
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 272
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 279
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 280
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "_CURRENT"at line 287
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 296
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 297
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 303
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "EVEN"at line 304
+ Level :1  TAG :null
+Syntax Error: Invalid Tag "TYPE"at line 305
+ Level :2  TAG :null
+Syntax Error: Invalid Tag "_CURRENT"at line 306
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :CHIL
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "PLAC"at line 313
+ Level :2  TAG :null
+ Level :1  TAG :DIV
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "_CURRENT"at line 316
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+ Level :1  TAG :MARR
+ Level :2  TAG :DATE
+Syntax Error: Invalid Tag "_CURRENT"at line 322
+ Level :1  TAG :null
+ Level :0  TAG :FAM
+ Level :1  TAG :HUSB
+ Level :1  TAG :WIFE
+Syntax Error: Invalid Tag "_CURRENT"at line 326
+ Level :1  TAG :null
+ Level :0  TAG :TRLR
+
+
+
+
+Individual Info
+
+
+
+
+Individual Id:		@I1@
+Name:			Varun Shah
+Gender:			M
+D.O.B:			3-NOV-1985
+Age:				30
+D.O.D:			null
+Child of Family:	@F1@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I2@
+Name:			Bina Shah
+Gender:			F
+D.O.B:			12-NOV-1962
+Age:				53
+D.O.D:			null
+Child of Family:	@F1@
+Spouse of Family:	@F2@
+
+
+
+
+Individual Id:		@I3@
+Name:			Ketan Shah
+Gender:			M
+D.O.B:			1-SEP-1956
+Age:				59
+D.O.D:			30-SEP-1992
+Child of Family:	@F1@
+Spouse of Family:	@F1@
+
+
+
+
+Individual Id:		@I4@
+Name:			Prabhuta Shah
+Gender:			M
+D.O.B:			8-APR-1935
+Age:				80
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F3@
+
+
+
+
+Individual Id:		@I5@
+Name:			Navinchandra Shah
+Gender:			M
+D.O.B:			9-APR-1930
+Age:				85
+D.O.D:			null
+Child of Family:	@F4@
+Spouse of Family:	@F3@
+
+
+
+
+Individual Id:		@I6@
+Name:			Chetan Shah
+Gender:			M
+D.O.B:			1-JAN-1960
+Age:				55
+D.O.D:			null
+Child of Family:	@F3@
+Spouse of Family:	@F5@
+
+
+
+
+Individual Id:		@I7@
+Name:			Metan Shah
+Gender:			M
+D.O.B:			2-JAN-1962
+Age:				53
+D.O.D:			null
+Child of Family:	@F3@
+Spouse of Family:	@F6@
+
+
+
+
+Individual Id:		@I8@
+Name:			Keshav Shah
+Gender:			F
+D.O.B:			1-FEB-1965
+Age:				50
+D.O.D:			null
+Child of Family:	@F3@
+Spouse of Family:	@F7@
+
+
+
+
+Individual Id:		@I9@
+Name:			Nilesh Vyas
+Gender:			F
+D.O.B:			14-MAY-1958
+Age:				57
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F8@
+
+
+
+
+Individual Id:		@I10@
+Name:			Maitrik Shah
+Gender:			M
+D.O.B:			6-FEB-1988
+Age:				27
+D.O.D:			null
+Child of Family:	@F1@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I11@
+Name:			Devina Vyas
+Gender:			F
+D.O.B:			10-MAY-1981
+Age:				34
+D.O.D:			null
+Child of Family:	@F8@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I12@
+Name:			Smitha Vyas
+Gender:			F
+D.O.B:			5-MAY-1962
+Age:				53
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F8@
+
+
+
+
+Individual Id:		@I13@
+Name:			Denzy Vyas
+Gender:			M
+D.O.B:			3-OCT-1995
+Age:				20
+D.O.D:			null
+Child of Family:	@F2@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I14@
+Name:			Kalpna Shah
+Gender:			F
+D.O.B:			6-MAR-1965
+Age:				50
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F6@
+
+
+
+
+Individual Id:		@I15@
+Name:			Krupal Shah
+Gender:			F
+D.O.B:			29-FEB-1996
+Age:				19
+D.O.D:			null
+Child of Family:	@F6@
+Spouse of Family:	null
+
+
+
+
+Individual Id:		@I16@
+Name:			Shilpa Shah
+Gender:			F
+D.O.B:			4-APR-1962
+Age:				53
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F5@
+
+
+
+
+Individual Id:		@I17@
+Name:			Hasmukh Shah
+Gender:			F
+D.O.B:			3-JAN-1930
+Age:				85
+D.O.D:			5-MAR-2013
+Child of Family:	null
+Spouse of Family:	@F4@
+
+
+
+
+Individual Id:		@I18@
+Name:			Manu Bechar Shah
+Gender:			M
+D.O.B:			2-FEB-1910
+Age:				105
+D.O.D:			2-MAR-1980
+Child of Family:	null
+Spouse of Family:	@F4@
+
+
+
+
+Individual Id:		@I19@
+Name:			Adit Shah
+Gender:			M
+D.O.B:			17-APR-1996
+Age:				19
+D.O.D:			null
+Child of Family:	@F5@
+Spouse of Family:	@F9@
+
+
+
+
+Individual Id:		@I20@
+Name:			Darshana Shah
+Gender:			M
+D.O.B:			5-APR-1965
+Age:				50
+D.O.D:			null
+Child of Family:	null
+Spouse of Family:	@F7@
+
+
+
+
+Individual Id:		@I21@
+Name:			Anu Shah
+Gender:			F
+D.O.B:			1-JAN-1997
+Age:				18
+D.O.D:			null
+Child of Family:	@F6@
+Spouse of Family:	@F9@
+
+
+
+
+Individual Id:		@I22@
+Name:			Vedu Shah
+Gender:			M
+D.O.B:			1-JAN-1985
+Age:				30
+D.O.D:			null
+Child of Family:	@F6@
+Spouse of Family:	@F10@
+
+
+
+
+Individual Id:		@I23@
+Name:			Alpa Shah
+Gender:			F
+D.O.B:			2-FEB-1970
+Age:				45
+D.O.D:			null
+Child of Family:	@F3@
+Spouse of Family:	@F10@
+
+
+
+
+Family Info
+
+
+
+
+Family Id:		@F1@
+Date of Marriage:	14-APR-1984
+Husband's Id:		@I3@ Ketan Shah
+Wife's Id:		@I2@ Bina Shah
+Id/s of Child/Children:	@I10@ (27)	@I1@ (30)	@I2@ (53)	@I3@ (59)	
+Child (@I10@) is an orphan
+Date of Divorce:	null
+List of Orphans : 
+@I10@
+
+
+
+
+
+Family Id:		@F2@
+Date of Marriage:	14-MAY-2000
+Husband's Id:		@I9@ Nilesh Vyas
+Wife's Id:		@I2@ Bina Shah
+Anomaly US11:Bina Shah(I2) is already married to another spouse
+Id/s of Child/Children:	@I13@ (20)	
+Date of Divorce:	null
+List of Couples who were married when the older spouse was more than twice as old as the younger spouse : 
+I9 and I2
+
+
+
+
+Family Id:		@F3@
+Date of Marriage:	6-JAN-1955
+Husband's Id:		@I5@ Navinchandra Shah
+Wife's Id:		@I4@ Prabhuta Shah
+Id/s of Child/Children:	@I23@ (45)	@I8@ (50)	@I7@ (53)	@I6@ (55)	@I3@ (59)	
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F4@
+Date of Marriage:	5-FEB-1945
+Husband's Id:		@I18@ Manu Bechar Shah
+Wife's Id:		@I17@ Hasmukh Shah
+Id/s of Child/Children:	@I5@ (85)	
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F5@
+Date of Marriage:	4-APR-1990
+Husband's Id:		@I6@ Chetan Shah
+Wife's Id:		@I16@ Shilpa Shah
+Id/s of Child/Children:	@I19@ (19)	
+Date of Divorce:	null
+List of Couples who were married when the older spouse was more than twice as old as the younger spouse : 
+I9 and I2
+I18 and I17
+
+
+
+
+Family Id:		@F6@
+Date of Marriage:	2-FEB-1995
+Husband's Id:		@I7@ Metan Shah
+Wife's Id:		@I14@ Kalpna Shah
+Id/s of Child/Children:	@I21@ (18)	@I15@ (19)	@I22@ (30)	
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F7@
+Date of Marriage:	3-FEB-1990
+Husband's Id:		@I8@ Keshav Shah
+Wife's Id:		@I20@ Darshana Shah
+Id/s of Child/Children:	null
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F8@
+Date of Marriage:	5-FEB-1980
+Husband's Id:		@I9@ Nilesh Vyas
+Anomaly US11:Nilesh Vyas(I9) is already married to another spouse
+Wife's Id:		@I12@ Smitha Vyas
+Id/s of Child/Children:	@I11@ (34)	
+Date of Divorce:	3-FEB-1999
+List of Couples who were married when the older spouse was more than twice as old as the younger spouse : 
+I9 and I2
+I18 and I17
+I9 and I12
+
+
+
+
+
+Family Id:		@F9@
+Date of Marriage:	3-JAN-2000
+Husband's Id:		@I19@ Adit Shah
+Anomaly US19: First Cousins are married to one another
+Wife's Id:		@I21@ Anu Shah
+Id/s of Child/Children:	null
+Date of Divorce:	null
+
+
+
+
+Family Id:		@F10@
+Date of Marriage:	null
+Husband's Id:		@I22@ Vedu Shah
+Anomaly US20: Aunts and uncles should not marry their nieces or nephews
+Wife's Id:		@I23@ Alpa Shah
+Id/s of Child/Children:	null
+Date of Divorce:	null
+
