@@ -1,0 +1,27 @@
+--------------List all multiple births in a GEDCOM file -----------------------
+Multiple births in the family @F1@ are: 
+@I1@Varun /Shah/
+@I2@Bina /Shah/
+@I3@Ketan /Shah/
+@I10@Maitrik /Shah/
+Multiple births in the family @F2@ are: 
+@I13@Denzy /Vyas/
+Multiple births in the family @F3@ are: 
+@I3@Ketan /Shah/
+@I6@Chetan /Shah/
+@I7@Metan /Shah/
+@I8@Keshav /Shah/
+@I23@Alpa /Shah/
+Multiple births in the family @F4@ are: 
+@I5@Navinchandra /Shah/
+Multiple births in the family @F5@ are: 
+@I19@Adit /Shah/
+Multiple births in the family @F6@ are: 
+@I15@Krupal /Shah/
+@I21@Anu /Shah/
+@I22@Vedu /Shah/
+Multiple births in the family @F7@ are: 
+Multiple births in the family @F8@ are: 
+@I11@Devina /Vyas/
+Multiple births in the family @F9@ are: 
+Multiple births in the family @F10@ are: 
