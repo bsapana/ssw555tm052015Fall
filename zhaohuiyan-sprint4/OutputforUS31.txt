@@ -1,0 +1,2 @@
+-----------List all living people over 30 who have never been married in a GEDCOM file--------------
+Individual: @I11@ NAME:Devina /Vyas/ is living and his/her age is over 30 and has never been married!
