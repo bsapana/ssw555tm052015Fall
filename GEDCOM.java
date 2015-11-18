@@ -485,6 +485,12 @@ class MainActivity
                  //printing saved data
                      System.out.println("\n");
                      System.out.println("\n");
+
+		List<String> orphans = new ArrayList<String>(); //added for US33 
+                List<String> couples = new ArrayList<String>(); //added for US34
+
+
+
                  System.out.println("Individual Info");
                   for(int c=0;c<indi.size();c++)
                   {
@@ -511,10 +517,10 @@ class MainActivity
                   
                   
                   
+                                    
+                  //start: Added for US01
                   
-                  
-                           		//start: Added for US01
-                  if(dob.compareTo("null")!=0)
+		if(dob.compareTo("null")!=0)
                  {   
                      if( !currentdatevalidation(dob))
                      {
@@ -601,6 +607,33 @@ class MainActivity
 		System.out.println("Husband's Id:\t\t" + husb.get(id)+" "+name.get(husb.get(id)));
                System.out.println("Wife's Id:\t\t" + wife.get(id)+" "+name.get(wife.get(id)));
                System.out.println("Id/s of Child/Children:\t" + chil.get(id));
+
+		//start: Added for US33
+               
+               String husbdod, wifedod, childdobirth="";
+               husbdod = deat.get(husb.get(id)).toString();
+               wifedod = deat.get(wife.get(id)).toString();
+               
+               String Str3 = chil.get(id).toString(); //.replace("@","");
+               for (String child: Str3.split("~")){
+             	  if(birt.get(child)!=null)
+             		  childdobirth = birt.get(child).toString();
+               if(child.compareTo("null")!=0 && childdobirth.compareTo("null")!=0){
+	                  if(husbdod.compareTo("null")!=0 && wifedod.compareTo("null")!=0 && childAgeValidation(childdobirth))
+	                  	{
+	                	  System.out.println("Child ("+child+") is an orphan");
+	                	  orphans.add(child);
+	                  	}
+               	  }
+                 }
+               
+               //end: Added for US33
+               
+               //start: Added for US34
+               
+               if(spouseAgeValidation(hdob, wdob, dom))
+             	  couples.add(husb.get(id).toString().replace("@", "")+" and "+wife.get(id).toString().replace("@", ""));
+               //end: Added for US34
                
                //start: Added for US17
                
@@ -675,6 +708,31 @@ class MainActivity
                 }
               }
              //end: Added by US09
+
+		//start: Added for US33
+               
+               if(orphans.size() > 0) {
+                  System.out.println("");
+                  System.out.println("List of Orphans : ");
+
+       		 for (int i = 0; i < orphans.size(); i++) {
+       			System.out.println(orphans.get(i));
+       			}
+               }
+               //end: Added for US33
+               
+               //start: Added for US34
+               
+               if(couples.size() > 0) {
+                  System.out.println("");
+                  System.out.println("List of Couples who were married when the older spouse was more than twice as old as the younger spouse : ");
+
+       		 for (int i = 0; i < couples.size(); i++) {
+       			System.out.println(couples.get(i));
+       			}
+               }
+               //end: Added for US34
+
                   
                    //us19
                try{
@@ -1328,6 +1386,164 @@ class MainActivity
       return true;
      }
   
-  	//end: Added for US09        
+  	//end: Added for US09     
+
+//start: Added for US33
+  
+  public static boolean childAgeValidation(String date)
+  {
+      try
+      {
+      ArrayList<String> month = new ArrayList<String>();
+            month.add("JAN");
+            month.add("FEB");
+            month.add("MAR");
+            month.add("APR");
+            month.add("MAY");
+            month.add("JUN");
+            month.add("JUL");
+            month.add("AUG");
+            month.add("SEP");
+            month.add("OCT");
+            month.add("NOV");
+            month.add("DEC");
+
+            int date_day,date_month,date_year;
+            String[] array = date.split("-");
+            
+            if(array[0].length()<2)
+            {
+         	   date_day=Integer.parseInt(0+array[0]);
+            }
+            else
+            {
+         	   date_day=Integer.parseInt(array[0]);
+             }
+            
+            
+            date_month=(month.indexOf(array[1]));
+            date_year=Integer.parseInt(array[2]);
+            
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date checkDate = sdf.parse(date_year+"-"+date_month+"-"+date_day);
+     	
+     	    Calendar cal = Calendar.getInstance();
+     	    SimpleDateFormat curr = new SimpleDateFormat("yyyy-MM-dd");
+     	    String dat = curr.format(cal.getTime());
+     	    Date currDate = curr.parse(dat);
+     	    
+     	    int diffInDays = (int)( (currDate.getTime() - checkDate.getTime()) 
+                     / (1000 * 60 * 60 * 24) );
+     	    
+     	    int diffInYears = diffInDays/365;
+                     
+     	if(diffInYears < 18){
+     		return true;
+             }
+     	
+     }
+     catch(Exception e)
+     {
+         System.out.println("Error in childAgeValidation() :"+e.getMessage() );
+     }
+            
+      return false;
+     }
+  
+  //end: Added for US33
+  
+  //start: Added for US34
+  
+  public static boolean spouseAgeValidation(String hdob, String wdob, String dom)
+  {
+      try
+      {
+          ArrayList<String> month = new ArrayList<String>();
+                month.add("JAN");
+                month.add("FEB");
+                month.add("MAR");
+                month.add("APR");
+                month.add("MAY");
+                month.add("JUN");
+                month.add("JUL");
+                month.add("AUG");
+                month.add("SEP");
+                month.add("OCT");
+                month.add("NOV");
+                month.add("DEC");
+
+                int husb_birth_day,husb_birth_month,husb_birth_year,wife_birth_day,wife_birth_month,wife_birth_year,marriage_day,marriage_month,marriage_year;
+                String[] array = hdob.split("-");
+                
+                if(array[0].length()<2)
+                {
+             	   husb_birth_day=Integer.parseInt(0+array[0]);
+                }
+                else
+                {
+             	   husb_birth_day=Integer.parseInt(array[0]);
+                 }
+                
+                
+                husb_birth_month=(month.indexOf(array[1])+1);
+                husb_birth_year=Integer.parseInt(array[2]);
+                
+                String[] array2 = wdob.split("-");
+                
+                if(array2[0].length()<2)
+                {
+                wife_birth_day=Integer.parseInt(0+array2[0]);
+                }
+                else
+                {
+                wife_birth_day=Integer.parseInt(array2[0]);
+                 }
+                wife_birth_month=(month.indexOf(array2[1])+1);
+                wife_birth_year=Integer.parseInt(array2[2]);
+                
+                String[] array3 = dom.split("-");
+                
+                if(array3[0].length()<2)
+                {
+                marriage_day=Integer.parseInt(0+array3[0]);
+                }
+                else
+                {
+                marriage_day=Integer.parseInt(array3[0]);
+                 }
+                marriage_month=(month.indexOf(array3[1])+1);
+                marriage_year=Integer.parseInt(array3[2]);
+                
+             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+         	Date husb_birth_date = sdf.parse( husb_birth_year+"-"+husb_birth_month+"-"+husb_birth_day);
+         	Date wife_birth_date = sdf.parse( wife_birth_year+"-"+wife_birth_month+"-"+wife_birth_day);
+         	Date marriage_date = sdf.parse( marriage_year+"-"+marriage_month+"-"+marriage_day);
+         	
+         	int diffInDaysForHusb = 0, diffInYearsForHusb = 0, diffInDaysForWife = 0, diffInYearsForWife = 0, diffInYears = 0, diffBetweenSpouses = 0;
+         	
+         	diffInDaysForHusb = (int)( (marriage_date.getTime() - husb_birth_date.getTime()) / (1000 * 60 * 60 * 24) );
+     	    diffInYearsForHusb = diffInDaysForHusb/365;
+     	    
+     	    diffInDaysForWife = (int)( (marriage_date.getTime() - wife_birth_date.getTime()) / (1000 * 60 * 60 * 24) );
+     	    diffInYearsForWife = diffInDaysForWife/365;
+                     
+	        	if(diffInYearsForHusb > diffInYearsForWife){
+	        		if((diffInYearsForHusb - diffInYearsForWife) > diffInYearsForWife)
+	        			return true;
+	                }
+	        	else{
+	        		if((diffInYearsForWife - diffInYearsForHusb) > diffInYearsForHusb)
+	        			return true;
+		        }
+      	}
+	        catch(Exception e)
+	        {
+	            System.out.println("Error in spouseAgeValidation() :"+e.getMessage() );
+	        }
+            
+      return false;
+     }
+  
+  	//end: Added for US34  
        
 }
