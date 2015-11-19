@@ -37,8 +37,12 @@ public class dadadad {
 			printMaps();
 			//siblingSpacing(families);
 		   // multiplebirthslessthan5(families);
-			marriageBeforeDeath(families);	
-			checkrightgender(families);
+		//	marriageBeforeDeath(families);	
+		//	checkrightgender(families);
+			
+			ListDecesed(individuals);
+			ListLivingMarried(individuals,families);
+			
 
 		} catch (FileNotFoundException ex) {
 			System.out.println("File Not Found. Please Check Path and Filename");
@@ -373,6 +377,7 @@ public class dadadad {
 			}
 		}
 	}
+
 	//US 21 Husband in family should be male and wife in family should be famale.
 	static void checkrightgender(HashMap<String, family> families) throws FileNotFoundException, IOException{
 		Map<String, family> famMap = new HashMap<String, family>(families);
@@ -413,6 +418,75 @@ public class dadadad {
 							"Wife " +fam.getWife()+ "is " + ind2.getSex());
 				}
 			}
-		
+	
+	}
+	static void ListDecesed(HashMap<String, individual> individuals2) throws FileNotFoundException, IOException{
+		Map<String, individual> indMap = new HashMap<String, individual>(individuals);
+		Iterator<Map.Entry<String, individual>> entries = indMap.entrySet().iterator();
+		while (entries.hasNext()) {
+			Map.Entry<String, individual> entry = entries.next();
+			individual indi = entry.getValue();
+			Date deathDate = null;
+			try {
+				if (indi.getDeath() != null) {
+					deathDate = sdf.parse(indi.getDeath());
+					writeToFile(
+							"***************************ERROR: User Story US29: List all the deceased individual*******************************\nIndividual: "
+									+ indi.getId() + ": " + indi.getName()
+									+ " is dead at : " + indi.getDeath()
+									+ "\n**********************************************************************************************************\n");
+				}
+	
+}catch (ParseException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+		}}
+	
+	
+	static void ListLivingMarried(HashMap<String, individual> individuals, HashMap<String, family> families)
+			throws FileNotFoundException, IOException {
+		//Map<String, individual> indMap = new HashMap<String, individual>(individuals);
+		Map<String, family> famMap = new HashMap<String, family>(families);
+		// List<String> children = new ArrayList<String>();
+		Iterator<Map.Entry<String, family>> famEntries = famMap.entrySet().iterator();
+	//	Iterator<Map.Entry<String, individual>> entries = indMap.entrySet().iterator();
+
+		Date marriageDate = null;
+		Date divorceDate = null;
+		Date deathDate = null;
+		while (famEntries.hasNext()) {
+			Map.Entry<String, family> famEntry = famEntries.next();
+			family fam = famEntry.getValue();
+			//Map.Entry<String, individual> entry = entries.next();
+			//individual indi = entry.getValue();
+			try{
+				marriageDate = sdf.parse(fam.getMarriage());
+				//divorceDate = sdf.parse(fam.getDivorce());
+				//deathDate = sdf.parse(indi.getDeath());
+				individual ind1 = individuals.get(fam.getHusb());
+				individual ind2 = individuals.get(fam.getWife());
+				if(fam.getMarriage()!=null){
+					//if(fam.getDivorce()!=null){
+					if(ind1.getDeath()!="Y" && ind2.getDeath()!="Y"){
+					writeToFile(
+							"***************************ERROR: User Story US30: List all the living married people*******************************\nIndividual: "
+									+ ind1.getId() + ": " + ind1.getName()
+									+ " is married at "+ fam.getMarriage()+ " with "+ ind2.getId()+ ": " + ind2.getName()+" and still living  : " 
+									+ "\n**********************************************************************************************************\n");
+			}
+				//}
+		/*	if(ind2.getDeath()!="Y"){
+				writeToFile(
+						"***************************ERROR: User Story US30: List all the living married people*******************************\nIndividual: "
+								+ ind2.getId() + ": " + ind2.getName()
+								+ " is married at "+ fam.getMarriage()+ " and still living  : " 
+								+ "\n**********************************************************************************************************\n");
+		}*/}
+				}catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				}
+		}
 	}
 }
